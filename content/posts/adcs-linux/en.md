@@ -6,6 +6,8 @@ lang: "en"
 key: "adcs-linux"
 ---
 
+![adcs_linux](images/adcs_linux.png)
+
 Hello everyone,
 
 I started a new project on my [GitHub](https://github.com/sfonteneau/ADCS_python) — an ADCS server written in Python.
