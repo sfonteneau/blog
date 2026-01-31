@@ -6,8 +6,6 @@ lang: "en"
 key: "azure-ad-connect-samba4"
 ---
 
-Lire en : [![French](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAbFBMVEVzldTg4ODS0tLxDwDtAwDjAADD0uz39/fy8vL3k4nzgna4yOixwuXu7u7s6+zn5+fyd2rvcGPtZljYAABrjNCpvOHrWkxegsqfs93NAADpUUFRd8THAABBa7wnVbERRKa8vLyxsLCoqKigoKClCvcsAAAAXklEQVR4AS3JxUEAQQAEwZo13Mk/R9w5/7UERJCIGIgj5qfRJZEpPyNfCgJTjMR1eRRnJiExFJz5Mf1PokWr/UztIjRGQ3V486u0HO55m634U6dMcf0RNPfkVCTvKjO16xHA8miowAAAAABJRU5ErkJggg==) Français](../../azure-ad-connect-samba4/index.html)  
-
 ![](images/AAD-Logosamba.45d2448b.png)
 
 
@@ -17,9 +15,9 @@ Hello
 It’s been a long time since I’ve written on this blog.
 
 
-Recently I came across several articles about how active directory password synchronization works with azure ad connect:  
+Recently I came across several articles about how active directory password synchronization works with azure ad connect:
 
-– [Microsoft how-password-hash-synchronization-works](https://learn.microsoft.com/en-us/azure/active-directory/hybrid/connect/how-to-connect-password-hash-synchronization#how-password-hash-synchronization-works)  
+– [Microsoft how-password-hash-synchronization-works](https://learn.microsoft.com/en-us/azure/active-directory/hybrid/connect/how-to-connect-password-hash-synchronization#how-password-hash-synchronization-works)
 
 – [Dsinternals how-azure-active-directory-connect-syncs-passwords](https://www.dsinternals.com/en/how-azure-active-directory-connect-syncs-passwords/)
 
@@ -27,11 +25,11 @@ Recently I came across several articles about how active directory password sync
 The operation is as follows: azure ad connect takes the hashnt encoded in utf16-le, and enters it in the PBKDF2-HMAC-SHA256″ function with 1000 iterations and random salt
 
 
-These same researches brought me to Dr Nestori Syynimaa ([@DrAzureAD](https://twitter.com/DrAzureAD)):  
+These same researches brought me to Dr Nestori Syynimaa ([@DrAzureAD](https://twitter.com/DrAzureAD)):
 
-[aadinternals long-passwords](https://aadinternals.com/post/long-passwords/) work which allows from a simple powershell script to send a hashnt.  
+[aadinternals long-passwords](https://aadinternals.com/post/long-passwords/) work which allows from a simple powershell script to send a hashnt.
 
-So I try my luck with the powershell and I see that it works!  
+So I try my luck with the powershell and I see that it works!
 
 The code of Dr [@DrAzureAD](https://twitter.com/DrAzureAD) is opensource, so I think… there is surely a possibility to convert it in python to use it under linux and thus with samba.
 
@@ -80,7 +78,7 @@ The script then stores the latest information in a local sqlite database, it wil
 **WARNING** if you have already used the azure ad connect windows, you must identify your “sourceanchor” or “immutableId” from your previous configuration.
 
 
-By default microsoft uses [objectGUID](https://learn.microsoft.com/en-us/azure/active-directory/hybrid/plan-connect-design-concepts#sourceanchorSourceAnchorAttr=objectGUID) with [msDSConsistencyGuid](https://learn.microsoft.com/en-us/azure/active-directory/hybrid/plan-connect-design-concepts#using-ms-ds-consistencyguid-as-sourceanchor), so i did the same, however, depending on the version your settings may be different.  
+By default microsoft uses [objectGUID](https://learn.microsoft.com/en-us/azure/active-directory/hybrid/plan-connect-design-concepts#sourceanchorSourceAnchorAttr=objectGUID) with [msDSConsistencyGuid](https://learn.microsoft.com/en-us/azure/active-directory/hybrid/plan-connect-design-concepts#using-ms-ds-consistencyguid-as-sourceanchor), so i did the same, however, depending on the version your settings may be different.
 
 It’s up to you to identify your sourceanchor to avoid duplicates and/or bad deletions.
 

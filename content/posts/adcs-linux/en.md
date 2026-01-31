@@ -1,37 +1,56 @@
 ---
-title: "Azure Ad Connect and Openldap"
-date: "2023-05-17"
-slug: "azure-ad-connect-and-openldap"
+title: "ADCS Linux"
+date: "2025-09-24"
+slug: "adcs-linux"
 lang: "en"
 key: "adcs-linux"
 ---
 
-Lire en : [![French](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAbFBMVEVzldTg4ODS0tLxDwDtAwDjAADD0uz39/fy8vL3k4nzgna4yOixwuXu7u7s6+zn5+fyd2rvcGPtZljYAABrjNCpvOHrWkxegsqfs93NAADpUUFRd8THAABBa7wnVbERRKa8vLyxsLCoqKigoKClCvcsAAAAXklEQVR4AS3JxUEAQQAEwZo13Mk/R9w5/7UERJCIGIgj5qfRJZEpPyNfCgJTjMR1eRRnJiExFJz5Mf1PokWr/UztIjRGQ3V486u0HO55m634U6dMcf0RNPfkVCTvKjO16xHA8miowAAAAABJRU5ErkJggg==) Français](../../azure-ad-connect-et-openldap/index.html)  
+Hello everyone,
 
-![](images/azuezopenldap.ebfbf4b9.png)
+I started a new project on my [GitHub](https://github.com/sfonteneau/ADCS_python) — an ADCS server written in Python.
 
+This project comes from a simple observation: some customers need **automatic enrollment** on their Windows machines, for example to manage 802.1x. Windows can do this with an ADCS.
+But when the customer wants a Linux server (because they already use Samba4), there ultimately aren’t many other turnkey solutions available.
 
- 
+This project therefore emulates an **ADCS enrollment server** (not a client).
+It reproduces the behavior of Microsoft ADCS Web Enrollment endpoints (CEP/CES) to handle certificate requests.
 
+- **Certificate Enrollment Policy (CEP)**: exposes a policy endpoint to provide enrollment templates and certificate authority information to clients.
+- **Certificate Enrollment Services (CES)**: emulates the service that accepts CSRs and returns signed certificates.
 
- 
+The goal is to emulate an ADCS Web Enrollment server that:
 
+1. Provides the CEP policy (templates, CA info, etc.) to requesting clients.
+2. Receives and validates PKCS#10 CSRs.
+3. Processes submissions through CES and returns signed responses.
 
-Hello everyone, another quick post,
+In this project, certificate templates are not defined through a traditional configuration.
+They are defined via **Python callbacks**.
 
+Each template is represented by an external module (for example ``callbacks/user_template.py``) exposing two required functions:
 
-In my previous article I present to you an [azure ad connect samba4](https://github.com/sfonteneau/AzureADConnect_Samba4) script written in python and which works under linux to synchronize your user/group/device to azure ad.
+- **define_template(app_conf, kerberos_user)**
+  → Dynamically describes the template properties (OID, EKU, KeyUsage, validity period, etc.) depending on the user or context.
+- **emit_certificate(...)**
+  → Takes the CSR and metadata as input, applies the required extensions, and issues a certificate signed by the certificate authority.
 
+Why use callbacks?
+------------------
 
-I also just made a new project almost identical to the first called [AzureADConnect\_Ldap](https://github.com/sfonteneau/AzureADConnect_Ldap) which allows users and groups to be synchronized from openldap (or other similar ldap solution) to azure ad. Convenient for organizations without active directory (Microsoft or samba4)
+- Provides **maximum flexibility**: template logic can depend on Active Directory attributes, group membership, external policies (ERP API), or any business rule.
+- Avoids locking the CA server into static, predefined templates.
 
+Security responsibility
+-----------------------
 
-Attention ! For password synchronization to work, your openldap must have the HASHNT (NTLM HASH) of the user.  
+This design shifts most security controls to the callback author. In practice:
 
-The attribute is often present if you have the samba3 schema in your openldap and present in the “sambaNTPassword” attribute
+- Eligibility checks (who is allowed to get what kind of certificate) must be implemented inside the callback.
+- If the callback does not apply checks, any authenticated user can obtain any certificate returned by the module.
+- The Python ADCS server does not enforce additional restrictions: it simply executes the callback and signs the result.
 
+In short: **security and enforcement of issuance rules** are entirely the responsibility of the callback code.
 
-There are many openldap implementations, the script may need some modifications to suit your needs
-
-
-Have fun !
+The project was largely **coded with AI** (handy for converting hard-to-read Microsoft RFCs into working code).
+It’s still early days, but feel free to send feedback!

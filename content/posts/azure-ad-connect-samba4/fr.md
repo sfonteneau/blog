@@ -6,10 +6,7 @@ lang: "fr"
 key: "azure-ad-connect-samba4"
 ---
 
-Read in : [![English](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAmVBMVEViZsViZMJiYrf9gnL8eWrlYkjgYkjZYkj8/PujwPybvPz4+PetraBEgfo+fvo3efkydfkqcvj8Y2T8UlL8Q0P8MzP9k4Hz8/Lu7u4DdPj9/VrKysI9fPoDc/EAZ7z7IiLHYkjp6ekCcOTk5OIASbfY/v21takAJrT5Dg6sYkjc3Nn94t2RkYD+y8KeYkjs/v7l5fz0dF22YkjWvcOLAAAAgElEQVR4AR2KNULFQBgGZ5J13KGGKvc/Cw1uPe62eb9+Jr1EUBFHSgxxjP2Eca6AfUSfVlUfBvm1Ui1bqafctqMndNkXpb01h5TLx4b6TIXgwOCHfjv+/Pz+5vPRw7txGWT2h6yO0/GaYltIp5PT1dEpLNPL/SdWjYjAAZtvRPgHJX4Xio+DSrkAAAAASUVORK5CYII=) English](../en/azure-ad-connect-samba4-2/index.html)  
-
 ![](images/AAD-Logosamba.45d2448b.png)
-
 
 Bonjour a tous
 
@@ -17,9 +14,9 @@ Bonjour a tous
 Cela fait bien longtemps que je n’est pas écris sur ce blog.
 
 
-Récemment je suis tomber sur plusieurs article concernant le fonctionnement de la synchronisation des password active directory avec azure ad connect:  
+Récemment je suis tomber sur plusieurs article concernant le fonctionnement de la synchronisation des password active directory avec azure ad connect:
 
-– [Microsoft how-password-hash-synchronization-works](https://learn.microsoft.com/en-us/azure/active-directory/hybrid/connect/how-to-connect-password-hash-synchronization#how-password-hash-synchronization-works)  
+– [Microsoft how-password-hash-synchronization-works](https://learn.microsoft.com/en-us/azure/active-directory/hybrid/connect/how-to-connect-password-hash-synchronization#how-password-hash-synchronization-works)
 
 – [Dsinternals how-azure-active-directory-connect-syncs-passwords](https://www.dsinternals.com/en/how-azure-active-directory-connect-syncs-passwords/)
 
@@ -27,16 +24,16 @@ Récemment je suis tomber sur plusieurs article concernant le fonctionnement de 
 Le fonctionnement est le suivant : azure ad connect prend le hashnt encodé en utf16-le, et le rentre dans la fonction PBKDF2-HMAC-SHA256″ avec 1000 itérations un sel aléatoire
 
 
-Ces même recherches m’ont amenez tomber sur le travail de Dr Nestori Syynimaa ([@DrAzureAD](https://twitter.com/DrAzureAD)):  
+Ces même recherches m’ont amenez tomber sur le travail de Dr Nestori Syynimaa ([@DrAzureAD](https://twitter.com/DrAzureAD)):
 
-[aadinternals long-passwords](https://aadinternals.com/post/long-passwords/)  qui permet a partir d’un simple script powershell d’envoyer un hashnt.  
+[aadinternals long-passwords](https://aadinternals.com/post/long-passwords/)  qui permet a partir d’un simple script powershell d’envoyer un hashnt.
 
-Je tente donc ma chance avec le powershell et je m’aperçois que cela fonctionne !  
+Je tente donc ma chance avec le powershell et je m’aperçois que cela fonctionne !
 
 Le code de @DrAzureAD est opensource, je me dit donc… il y a sûrement possibilité de le convertir en python pour l’utiliser sous linux et donc avec samba.
 
 
-Après analyse du code je comprend que microsoft communique avec en [WCF binary *xml*](https://fr.wikipedia.org/wiki/Windows_Communication_Foundation) ,  
+Après analyse du code je comprend que microsoft communique avec en [WCF binary *xml*](https://fr.wikipedia.org/wiki/Windows_Communication_Foundation) ,
 
 Bonne nouvelle [les spécification sont ouverte](https://learn.microsoft.com/en-us/openspecs/windows_protocols/mc-nbfx/94c66ea1-e79a-4364-af88-1fa7fef2cc33) et un projet python existe sur github : [python-wcfbin](https://github.com/ernw/python-wcfbin)
 
@@ -76,9 +73,9 @@ Le projet est capable d’envoyer des groupe et utilisateurs ansi que d’envoye
 Le script conserve ensuite les dernières informations dans une base sqlite local,  il l’enverra a nouveau l’objet a azure ad uniquement si l’objet a été modifier depuis le dernier envoie.
 
 
-**ATTENTION** Si vous avez déjà utiliser l’azure ad connect windows, vous devez bien identifier votre « sourceanchor » ou « immutableId » de votre configuration précédente.  
+**ATTENTION** Si vous avez déjà utiliser l’azure ad connect windows, vous devez bien identifier votre « sourceanchor » ou « immutableId » de votre configuration précédente.
 
-Par défaut microsoft utilise l’ [objectGUID](https://learn.microsoft.com/en-us/azure/active-directory/hybrid/plan-connect-design-concepts#sourceanchorSourceAnchorAttr=objectGUID) avec [msDSConsistencyGuid](https://learn.microsoft.com/en-us/azure/active-directory/hybrid/plan-connect-design-concepts#using-ms-ds-consistencyguid-as-sourceanchor), j’ai donc repris ce fonctionnement, cependant, en fonction des versions votre paramétrage peu être différent.  
+Par défaut microsoft utilise l’ [objectGUID](https://learn.microsoft.com/en-us/azure/active-directory/hybrid/plan-connect-design-concepts#sourceanchorSourceAnchorAttr=objectGUID) avec [msDSConsistencyGuid](https://learn.microsoft.com/en-us/azure/active-directory/hybrid/plan-connect-design-concepts#using-ms-ds-consistencyguid-as-sourceanchor), j’ai donc repris ce fonctionnement, cependant, en fonction des versions votre paramétrage peu être différent.
 
 A vous donc de bien identifier votre sourceanchor pour ne pas créer de doublon et/ou mauvaise suppression.
 
