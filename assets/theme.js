@@ -1,6 +1,7 @@
 (function(){
   const STORAGE_KEY = "theme";
   const root = document.documentElement;
+  root.classList.add("js");
 
   function apply(theme){
     if(theme === "light" || theme === "dark"){
@@ -31,4 +32,61 @@
     const btn = e.target.closest && e.target.closest(".theme-toggle");
     if(btn) toggle();
   });
+
+
+function initMenu(){
+  const header = document.querySelector(".site-header");
+  if(!header) return;
+  const nav = header.querySelector(".nav");
+  if(!nav) return;
+
+  // Ensure the nav has an id so aria-controls works
+  if(!nav.id) nav.id = "site-nav";
+
+  // Find a spot for the toggle button
+  const headerRight = header.querySelector(".header-right") || header.querySelector(".container") || header;
+
+  let btn = header.querySelector(".menu-toggle");
+  if(!btn){
+    btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "menu-toggle";
+    btn.setAttribute("aria-expanded", "false");
+    btn.setAttribute("aria-controls", nav.id);
+    btn.innerHTML = '<span aria-hidden="true">☰</span><span>Menu</span>';
+    // Put it at the start of the right-side controls
+    if(headerRight.firstChild){
+      headerRight.insertBefore(btn, headerRight.firstChild);
+    } else {
+      headerRight.appendChild(btn);
+    }
+  } else {
+    btn.setAttribute("aria-controls", nav.id);
+  }
+
+  const close = () => {
+    nav.classList.remove("is-open");
+    btn.setAttribute("aria-expanded", "false");
+  };
+  const toggle = () => {
+    const open = nav.classList.toggle("is-open");
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+  };
+
+  btn.addEventListener("click", toggle);
+
+  // Close on navigation click (mobile UX)
+  nav.addEventListener("click", (e) => {
+    const a = e.target.closest("a");
+    if(a) close();
+  });
+
+  // If we go back to desktop, ensure nav is open (no collapsed state)
+  const mq = window.matchMedia("(min-width: 761px)");
+  const onChange = (e) => { if(e.matches) close(); };
+  if(mq.addEventListener) mq.addEventListener("change", onChange);
+  else mq.addListener(onChange);
+}
+
+  document.addEventListener("DOMContentLoaded", initMenu);
 })();
