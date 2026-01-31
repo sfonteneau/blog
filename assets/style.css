@@ -218,6 +218,8 @@ html[data-theme="light"] .menu-toggle:hover{
 .post__content table{display:block; overflow-x:auto; max-width:100%}
 
 @media (max-width: 760px){
+
+  body.menu-open{overflow:hidden;}
   .site-header .container{
     flex-wrap: wrap;
     align-items: flex-start;
@@ -230,13 +232,27 @@ html[data-theme="light"] .menu-toggle:hover{
 
   /* Only collapse nav when JS is enabled (so it still works without JS) */
   html.js .nav{
+    /* Mobile menu is an overlay so opening it doesn't shift the page */
     display:none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: var(--header-h, 64px);
+    z-index: 999;
     width: 100%;
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
     gap: 4px;
-    padding: 10px 0 6px;
+    padding: 10px 14px 12px;
+    background: rgba(11,15,23,.96);
+    border-bottom: 1px solid var(--line);
+    max-height: calc(100vh - var(--header-h, 64px));
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  html[data-theme="light"].js .nav{
+    background: rgba(247,248,251,.98);
   }
   html.js .nav.is-open{display:flex;}
 

@@ -64,16 +64,39 @@ function initMenu(){
     btn.setAttribute("aria-controls", nav.id);
   }
 
+  const syncHeaderHeight = () => {
+    // Keep the overlay menu aligned just under the sticky header row
+    const h = header.offsetHeight || 64;
+    root.style.setProperty("--header-h", h + "px");
+  };
+
   const close = () => {
     nav.classList.remove("is-open");
     btn.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("menu-open");
   };
   const toggle = () => {
+    syncHeaderHeight();
     const open = nav.classList.toggle("is-open");
     btn.setAttribute("aria-expanded", open ? "true" : "false");
+    document.body.classList.toggle("menu-open", open);
+
+    // If the user is scrolled, ensure the menu's top is visible
+    if(open){
+      const top = header.getBoundingClientRect().top;
+      if(top < 0){
+        window.scrollTo({ top: window.scrollY + top, behavior: "auto" });
+      }
+    }
   };
 
+  syncHeaderHeight();
+
   btn.addEventListener("click", toggle);
+
+  document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape") close();
+  });
 
   // Close on navigation click (mobile UX)
   nav.addEventListener("click", (e) => {
