@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+  <section class="hero">
+    <h1>{% if lang.code == 'en' %}Posts{% else %}Articles{% endif %}</h1>
+    <p class="muted">{% if lang.code == 'en' %}Newest first.{% else %}Du plus récent au plus ancien.{% endif %}</p>
+  </section>
+
+  <section class="posts">
+    {% for p in posts %}
+      <article class="card">
+        <div class="card__meta">
+          <time datetime="{{ p.date_iso }}">{{ p.date_human }}</time>
+          <span class="dot">•</span>
+          <span class="muted">{{ p.reading_time }}</span>
+        </div>
+        <h2 class="card__title"><a href="{{ p.url }}">{{ p.title }}</a></h2>
+        {% if p.excerpt %}<p class="card__excerpt">{{ p.excerpt }}</p>{% endif %}
+      </article>
+    {% else %}
+      <p>{% if lang.code == 'en' %}No posts found.{% else %}Aucun article trouvé.{% endif %}</p>
+    {% endfor %}
+  </section>
+{% endblock %}

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="{{ lang.code }}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ page_title }}</title>
+  <meta name="description" content="{{ site.tagline|default('') }}" />
+  <link rel="stylesheet" href="{{ rel }}/assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <a class="brand__title" href="{{ home_href }}">{{ site.title }}</a>
+        {% if site.tagline %}<div class="brand__tagline">{{ site.tagline }}</div>{% endif %}
+      </div>
+
+      <div class="header-right">
+        <nav class="nav">
+          {% for item in menu %}
+            {% set href = item.href %}
+            {% if href.startswith('http://') or href.startswith('https://') %}
+              <a class="nav__link" href="{{ href }}" target="_blank" rel="noopener">{{ item.label }}</a>
+            {% elif href.startswith('mailto:') %}
+              <a class="nav__link" href="{{ href }}">{{ item.label }}</a>
+            {% elif href == '/' %}
+              <a class="nav__link" href="{{ rel }}/index.html">{{ item.label }}</a>
+            {% elif href == '/en/' %}
+              <a class="nav__link" href="{{ rel }}/en/index.html">{{ item.label }}</a>
+            {% else %}
+              <a class="nav__link" href="{{ href }}">{{ item.label }}</a>
+            {% endif %}
+          {% endfor %}
+        </nav>
+
+        <button class="theme-toggle" type="button" aria-label="Basculer thème" title="Basculer thème">
+          <span class="theme-toggle__icon" aria-hidden="true">🌓</span>
+          <span class="theme-toggle__label">Thème</span>
+        </button>
+
+        {% if languages and languages|length > 1 %}
+        <div class="lang-switch">
+          {% for l in languages %}
+            {% if l.code == lang.code %}
+              <span class="lang-pill lang-pill--active">{{ l.label }}</span>
+            {% else %}
+              <a class="lang-pill" href="{{ rel }}{{ l.path }}index.html">{{ l.label }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="muted">
+        © {{ now_year }}{% if site.author %} — {{ site.author }}{% endif %}. Généré statiquement.
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ rel }}/assets/theme.js"></script>
+</body>
+</html>

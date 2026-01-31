@@ -1,0 +1,24 @@
+site:
+  title: "Les Fourmis Du Web"
+  tagline: "Blog d'actualité informatique"
+  author: "Simon Fonteneau"
+
+languages:
+  - code: "fr"
+    label: "Français"
+    path: "/"
+  - code: "en"
+    label: "English"
+    path: "/en/"
+
+menu:
+  - label: "Blog"
+    href: "/"
+  - label: "Wiki"
+    href: "https://wiki.lesfourmisduweb.org/"
+  - label: "CV"
+    href: "https://cv.lesfourmisduweb.org/"
+  - label: "Git"
+    href: "https://github.com/sfonteneau"
+  - label: "Contact"
+    href: "mailto:blog@lesfourmisduweb.org"
