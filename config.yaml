@@ -16,8 +16,6 @@ menu:
     href: "/"
   - label: "Wiki"
     href: "https://wiki.lesfourmisduweb.org/"
-  - label: "CV"
-    href: "https://cv.lesfourmisduweb.org/"
   - label: "Git"
     href: "https://github.com/sfonteneau"
   - label: "Contact"
