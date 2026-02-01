@@ -111,5 +111,29 @@ function initMenu(){
   else mq.addListener(onChange);
 }
 
-  document.addEventListener("DOMContentLoaded", initMenu);
+  function initLangMenu(){
+  const menu = document.querySelector(".lang-menu");
+  if(!menu) return;
+
+  // Close when clicking outside
+  document.addEventListener("click", function(e){
+    if(menu.open && !menu.contains(e.target)){
+      menu.removeAttribute("open");
+    }
+  });
+
+  // Close with Escape
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape" && menu.open){
+      menu.removeAttribute("open");
+      const summary = menu.querySelector("summary");
+      if(summary) summary.focus();
+    }
+  });
+}
+
+  document.addEventListener("DOMContentLoaded", function(){
+    initMenu();
+    initLangMenu();
+  });
 })();
