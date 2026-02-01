@@ -20,4 +20,32 @@
       <p>{% if lang.code == 'en' %}No posts found.{% else %}Aucun article trouvé.{% endif %}</p>
     {% endfor %}
   </section>
+
+  {% if pagination and pagination.enabled %}
+    <nav class="pagination" aria-label="Pagination">
+      <div class="pagination__inner">
+        {% if pagination.prev_url %}
+          <a class="pagination__link" href="{{ pagination.prev_url }}" rel="prev">← {% if lang.code == 'en' %}Previous{% else %}Précédent{% endif %}</a>
+        {% else %}
+          <span class="pagination__link is-disabled" aria-disabled="true">← {% if lang.code == 'en' %}Previous{% else %}Précédent{% endif %}</span>
+        {% endif %}
+
+        <div class="pagination__pages">
+          {% for pg in pagination.pages %}
+            {% if pg.is_current %}
+              <span class="pagination__page is-current" aria-current="page">{{ pg.num }}</span>
+            {% else %}
+              <a class="pagination__page" href="{{ pg.url }}">{{ pg.num }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        {% if pagination.next_url %}
+          <a class="pagination__link" href="{{ pagination.next_url }}" rel="next">{% if lang.code == 'en' %}Next{% else %}Suivant{% endif %} →</a>
+        {% else %}
+          <span class="pagination__link is-disabled" aria-disabled="true">{% if lang.code == 'en' %}Next{% else %}Suivant{% endif %} →</span>
+        {% endif %}
+      </div>
+    </nav>
+  {% endif %}
 {% endblock %}

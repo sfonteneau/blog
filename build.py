@@ -39,6 +39,7 @@ Commande:
 from __future__ import annotations
 
 import hashlib
+import os
 import re
 import shutil
 import sys
@@ -200,13 +201,30 @@ def load_config() -> Tuple[Dict[str, Any], List[Lang]]:
     data = data or {}
     data.setdefault("site", {})
     data.setdefault("menu", [])
+    data.setdefault("pagination", {})
     data.setdefault("languages", [{"code": "fr", "label": "FR", "path": "/"}, {"code": "en", "label": "EN", "path": "/en/"}])
     site = data["site"]
     site.setdefault("title", "Mon Blog")
     site.setdefault("tagline", "")
     site.setdefault("author", "")
+    # Pagination (page d'accueil) — par défaut 10 posts/page
+    pagination = data["pagination"] if isinstance(data.get("pagination"), dict) else {}
+    pagination.setdefault("posts_per_page", 10)
+    data["pagination"] = pagination
     langs = [Lang(code=l["code"], label=l.get("label", l["code"].upper()), path=l.get("path", f"/{l['code']}/")) for l in data["languages"]]
     return data, langs
+
+
+def rel_url(from_dir: Path, to_dir: Path) -> str:
+    """Retourne une URL relative vers un dossier (avec trailing slash)."""
+    rel = Path(os.path.relpath(str(to_dir), str(from_dir))).as_posix()
+    if rel == ".":
+        return "./"
+    if not rel.startswith("."):
+        rel = "./" + rel
+    if not rel.endswith("/"):
+        rel += "/"
+    return rel
 
 
 def iter_markdown_files() -> List[Path]:
@@ -231,6 +249,9 @@ def build() -> None:
     cfg, languages = load_config()
     menu = cfg.get("menu", [])
     site = cfg["site"]
+    posts_per_page = int(cfg.get("pagination", {}).get("posts_per_page", 10) or 10)
+    if posts_per_page <= 0:
+        posts_per_page = 10
 
     ensure_clean_dir(DIST_DIR)
     copy_static_assets()
@@ -280,43 +301,84 @@ def build() -> None:
     for lc in posts_by_lang:
         posts_by_lang[lc].sort(key=lambda x: x.date, reverse=True)
 
-    # Render indexes
+    # Render indexes (avec pagination)
     for lang in languages:
         lc = lang.code
         lang_posts = posts_by_lang.get(lc, [])
-        if lc == "fr":
-            out_dir = DIST_DIR
-            rel = "."
-            home_href = "./index.html"
-        else:
-            out_dir = DIST_DIR / lc
+
+        lang_root = DIST_DIR if lc == "fr" else (DIST_DIR / lc)
+        lang_root.mkdir(parents=True, exist_ok=True)
+
+        total_pages = max(1, (len(lang_posts) + posts_per_page - 1) // posts_per_page)
+        for page_num in range(1, total_pages + 1):
+            # Dossier de sortie pour cette page
+            out_dir = lang_root if page_num == 1 else (lang_root / "page" / str(page_num))
             out_dir.mkdir(parents=True, exist_ok=True)
-            rel = ".."
-            home_href = "./index.html"
 
-        view_posts = []
-        for p in lang_posts:
-            view_posts.append({
-                "title": p.title,
-                "date_iso": p.date_iso,
-                "date_human": p.date_human,
-                "reading_time": p.reading_time,
-                "excerpt": p.excerpt,
-                "url": f"./{p.slug}/",
-            })
+            # Profondeur pour atteindre dist/assets
+            # fr: index=0, page/N=2 ; en: index=1, page/N=3
+            depth_to_dist = 0 if lc == "fr" else 1
+            if page_num > 1:
+                depth_to_dist += 2
+            rel = compute_rel(depth_to_dist)
 
-        index_html = env.get_template("index.html").render(
-            page_title=site["title"],
-            site=site,
-            menu=menu,
-            posts=view_posts,
-            rel=rel,
-            now_year=now_year,
-            languages=[{"code": l.code, "label": l.label, "path": l.path} for l in languages],
-            lang={"code": lang.code, "label": lang.label, "path": lang.path},
-            home_href=home_href,
-        )
-        (out_dir / "index.html").write_text(index_html, encoding="utf-8")
+            # Lien "Accueil" (dans le header)
+            home_href = "./index.html" if page_num == 1 else rel_url(out_dir, lang_root) + "index.html"
+
+            # Slice des posts affichés
+            start = (page_num - 1) * posts_per_page
+            end = start + posts_per_page
+            page_posts = lang_posts[start:end]
+
+            # URL relative depuis la page d'index vers les posts (dans le dossier de la langue)
+            depth_in_lang = 0 if page_num == 1 else 2
+            post_prefix = compute_rel(depth_in_lang)
+            view_posts = []
+            for p in page_posts:
+                view_posts.append({
+                    "title": p.title,
+                    "date_iso": p.date_iso,
+                    "date_human": p.date_human,
+                    "reading_time": p.reading_time,
+                    "excerpt": p.excerpt,
+                    "url": f"{post_prefix}/{p.slug}/" if post_prefix != "." else f"./{p.slug}/",
+                })
+
+            # Pagination links
+            def page_dir(n: int) -> Path:
+                return lang_root if n == 1 else (lang_root / "page" / str(n))
+
+            pages = []
+            for n in range(1, total_pages + 1):
+                pages.append({
+                    "num": n,
+                    "url": rel_url(out_dir, page_dir(n)),
+                    "is_current": n == page_num,
+                })
+
+            prev_url = rel_url(out_dir, page_dir(page_num - 1)) if page_num > 1 else None
+            next_url = rel_url(out_dir, page_dir(page_num + 1)) if page_num < total_pages else None
+
+            index_html = env.get_template("index.html").render(
+                page_title=site["title"],
+                site=site,
+                menu=menu,
+                posts=view_posts,
+                pagination={
+                    "enabled": total_pages > 1,
+                    "current": page_num,
+                    "total": total_pages,
+                    "prev_url": prev_url,
+                    "next_url": next_url,
+                    "pages": pages,
+                },
+                rel=rel,
+                now_year=now_year,
+                languages=[{"code": l.code, "label": l.label, "path": l.path} for l in languages],
+                lang={"code": lang.code, "label": lang.label, "path": lang.path},
+                home_href=home_href,
+            )
+            (out_dir / "index.html").write_text(index_html, encoding="utf-8")
 
     # Render posts
     for p in posts:
