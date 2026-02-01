@@ -18,7 +18,7 @@ Xibo c’est quoi ?
 Xibo c’est un system d’affichage dynamique qui fonctionne en client/serveur.
 
 
-Dans mon établissement nous utilisons cette solution, nous avons 6 écrans d’affichages ( des nuc DE3815TYKE ) où est installé xibo client et un serveur web qui héberge xibo serveur et les media à diffuser..
+Dans mon établissement nous utilisons cette solution, nous avons 6 écrans d’affichages (des nuc DE3815TYKE) où est installé xibo client et un serveur web qui héberge xibo serveur et les media à diffuser..
 
 
 [![Simple-Network](images/Simple-Network-300x232.a0ba5cf5.png)](../wp-content/uploads/2015/09/Simple-Network.png)

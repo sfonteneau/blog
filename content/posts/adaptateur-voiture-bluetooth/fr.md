@@ -9,7 +9,7 @@ key: "adaptateur-voiture-bluetooth"
 En vacances, du coup, je fais un petit article non informatique.
 
 
-Il n’y a pas longtemps j’ai changé de voiture. A mon grand regret pas de bluetooth, pas d’auxiliaire, pas d’USB, par de carte SD. Bref, FM et CD uniquement. Par contre très bonne qualité de son.
+Il n’y a pas longtemps j’ai changé de voiture. À mon grand regret pas de bluetooth, pas d’auxiliaire, pas d’USB, pas de carte SD. Bref, FM et CD uniquement. Par contre très bonne qualité de son.
 
 
 J’ai commencé à voir pour changer l’autoradio mais cela était compliqué (ordinateur de bord relié) bref un merdier. Et puis cela aurait gâché le design
@@ -79,7 +79,7 @@ Du coup ce boîtier fait auxiliaire, carte SD, et USB. Et en option supplémenta
 Un truc con, toutes les commandes au volant fonctionnent (touche suivant, volume) sauf pour le Bluetooth, le bouton suivant pour les titre musicaux ne fonctionne pas. Mais je me demande si je ne me suis pas trompé d’adaptateur Bluetooth. Un petit bouton pour décrocher doit être installée. Pour le reste j’ai tout caché dans la boite à gant.
 
 
-Le soucis du yatour (à l’inverse du parot) vous serez obligé de basculer sur cd lors d’un appel.  Le deuxième gros soucis s’est qu’il faut que le yatour soit compatible avec votre voiture …
+Le soucis du yatour (à l’inverse du parot) vous serez obligé de basculer sur cd lors d’un appel.  Le deuxième gros soucis s’est qu’il faut que le yatour soit compatible avec votre voiture …
 
 
 **A vous de faire votre choix !**

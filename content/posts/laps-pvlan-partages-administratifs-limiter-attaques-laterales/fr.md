@@ -47,9 +47,9 @@ Une autre méthode est de mettre en place le pvlan sur les switch votre réseau.
 ### Activer LAPS
 
 
-Une  recommandation  également est d’activer laps sur votre réseau.  
+Une  recommandation  également est d’activer laps sur votre réseau.  
 
-En effet nous utilisons malheureusement régulièrement pour des raison de facilitée les même mot de passe administrateur locaux sur tous les postes …  Si ce mot de passe est compromis c’est toute la sécurités de réseau qui est compromise. Laps permet donc de gérer automatiquement le mot de passe du compte « Administrateur » local de toutes les machines de votre domaine. Le mot de passe est changée régulièrement et deviens unique a chaque machine. Il est ensuite stockée dans un attribut spécifique sécurisée dans l’active directory.
+En effet nous utilisons malheureusement régulièrement pour des raison de facilitée les même mot de passe administrateur locaux sur tous les postes …  Si ce mot de passe est compromis c’est toute la sécurités de réseau qui est compromise. Laps permet donc de gérer automatiquement le mot de passe du compte « Administrateur » local de toutes les machines de votre domaine. Le mot de passe est changée régulièrement et deviens unique a chaque machine. Il est ensuite stockée dans un attribut spécifique sécurisée dans l’active directory.
 
 
 - [Mettre en place laps sur un active directory microsoft windows server](https://www.it-connect.fr/securite-proteger-les-comptes-administrateur-local-avec-laps/)

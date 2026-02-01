@@ -18,7 +18,7 @@ Dans mon établissement nous avons de plus en plus de classe portable (les élè
 Les identifiants et mot de passe pour accéder au wifi, owncloud, etc sont ceux de l’AD, si l’utilisateur veut changer son mot de passe, il doit se connecter a un pc du domaine pour le changer, pas pratique.
 
 
-J’ai donc mis en place « Self Service Password »:  
+J’ai donc mis en place « Self Service Password »:  
 
 <http://ltb-project.org/wiki/documentation/self-service-password>
 
@@ -29,13 +29,13 @@ C’est une page web qui permet de changer son mot de passe :
 [![ssp_change_nooptions](images/ssp_change_nooptions-150x150.363d600b.png)](../wp-content/uploads/2016/07/ssp_change_nooptions.png)
 
 
- 
+ 
 
 
 Mais cet interface permet donc d’aller encore plus loin et pourrait bien vous changer la vie. En cas d’oublie de mot de passe, le système peut proposer plusieurs méthode pour le réinitialiser:
 
 
- 
+ 
 
 
 - Reset by questions
@@ -66,17 +66,17 @@ En effet, pour samba4, avant, j’envoyai les mot de passe via ce genre de scrip
 Mais ce genre de script me force à stocker les mot de passe de façon réversible dans l’AD, et je n’aime pas trop ça…
 
 
-L’autre méthode que j’ai envisager pour  samba est d’utiliser le  
+L’autre méthode que j’ai envisager pour  samba est d’utiliser le  
 
-« check password script », mais malheureusement cela ne fonctionne plus avec samba4 : <https://lists.samba.org/archive/samba/2016-June/200293.html>
+« check password script », mais malheureusement cela ne fonctionne plus avec samba4 : <https://lists.samba.org/archive/samba/2016-June/200293.html>
 
 
 **Edit 08/11/2016 :**  
 
-**Le « check password script » semble être pris en charge dans la version 4.5 de samba. Malheureusement je n’ai pas trouvée de solution pour récupérer le nom d’utilisateur :-/**
+**Le « check password script » semble être pris en charge dans la version 4.5 de samba. Malheureusement je n’ai pas trouvée de solution pour récupérer le nom d’utilisateur :-/**
 
 
-Ce genre de système est quand même utile avec un active directory, en effet le système de synchronisation  des mot de passe office 365 synchronise les mot de passe toute les 15 minute il me semble. Avec les script office 365 que j’utilise, le changement est instantanée.
+Ce genre de système est quand même utile avec un active directory, en effet le système de synchronisation  des mot de passe office 365 synchronise les mot de passe toute les 15 minute il me semble. Avec les script office 365 que j’utilise, le changement est instantanée.
 
 
 Voici donc mon script posthock pour google Apps et office 365:  
@@ -87,10 +87,10 @@ Voici donc mon script posthock pour google Apps et office 365:
 Attention ! Pour que le script fonctionne, la politique de complexités de mot de passe doit être sur 8 caractère minimum et 16 maximum !
 
 
-J’espère un jour que le « check password script » re-fonctionne a nouveau
+J’espère un jour que le « check password script » re-fonctionne a nouveau
 
 
- 
+ 
 
 
 **Edit 2019 :**

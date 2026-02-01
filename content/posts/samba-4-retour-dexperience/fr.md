@@ -18,25 +18,25 @@ Mais depuis l’arrivée de Samba 4 des alternatives fiables et offrant de nouve
 Je vais vous parler de mon retour d’expérience sur Samba 4 ici :
 
 
-Je l’utilise en deux serveurs virtuels :  
+Je l’utilise en deux serveurs virtuels :  
 
 – Un serveur Active Directory (LDAP)  
 
 – Un serveur de fichier
 
 
-Samba 4 reprend les principaux outils d’active directory :  
+Samba 4 reprend les principaux outils d’active directory :  
 
 GPO, ACL, DNS
 
 
 Mais cumule aussi les avantages qui étaient présents sous Samba 3 :  
 
-– pre-post exec (exécution de script avant ou après un accès au partage)  
+– pre-post exec (exécution de script avant ou après un accès au partage)  
 
 – hide files (permet de cacher des fichiers sur un partage)  
 
-– browseable (cacher un partage sans ajouter un $ comme sur les partages Windows)  
+– browseable (cacher un partage sans ajouter un $ comme sur les partages Windows)  
 
 – Autorisation de partage par adresse IP  
 
@@ -45,13 +45,13 @@ Mais cumule aussi les avantages qui étaient présents sous Samba 3 :
 – etc… etc …
 
 
-Toute la partie Active Directory, DNS, GPO peut être gérée via la commande samba-tools ou mieux, par les Microsoft Management Console.
+Toute la partie Active Directory, DNS, GPO peut être gérée via la commande samba-tools ou mieux, par les Microsoft Management Console.
 
 
 Voir fonctionnement ici :
 
 
-[iframe src= »http://www.youtube.com/embed/mDWIAGCJe2E » width= »100% » height= »500″]
+[iframe src= »http://www.youtube.com/embed/mDWIAGCJe2E » width= »100% » height= »500″]
 
 
 La partie partage à la Windows est également disponible!

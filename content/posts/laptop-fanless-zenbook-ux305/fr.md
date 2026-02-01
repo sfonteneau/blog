@@ -10,12 +10,12 @@ Je cherchais un laptop fanless (comprendre sans ventilateurs).
 
 Avoir un fanless a certains avantages :  
 
-– Pas de bruit et pas besoin de passer la soufflette dedans tous les 4 matins.  
+– Pas de bruit et pas besoin de passer la soufflette dedans tous les 4 matins.  
 
 – Bah oui, pas de ventilos, pas de poussière…
 
 
-[![composant-ordinateur-sale-poussiere-004-480x292](images/composant-ordinateur-sale-poussiere-004-480x292-300x183.267695cb.jpg)](../wp-content/uploads/2015/04/composant-ordinateur-sale-poussiere-004-480x292.jpg)Je voulais un truc plutôt fin. J’ai donc commencé mes recherches :
+[![composant-ordinateur-sale-poussiere-004-480x292](images/composant-ordinateur-sale-poussiere-004-480x292-300x183.267695cb.jpg)](../wp-content/uploads/2015/04/composant-ordinateur-sale-poussiere-004-480x292.jpg)Je voulais un truc plutôt fin. J’ai donc commencé mes recherches :
 
 
 Le nouveau MacBook (si si j’y ai vraiment songé), mais techniquement tout passe par le nouveau port USB-C (c’est le seul et unique port, bref c’est pas pratique du tout).
@@ -26,7 +26,7 @@ Le nouveau MacBook (si si j’y ai vraiment songé), mais techniquement tout pas
 
 Du coup pour une simple clé USB, vous avez besoin de l’adaptateur…  
 
-Vrai pas pratique…  Surtout quand le prix est quand même de 1449€ pour le modèle de départ équipé 256 Go de stockage…
+Vrai pas pratique…  Surtout quand le prix est quand même de 1449€ pour le modèle de départ équipé 256 Go de stockage…
 
 
 Bref passons à la suite…
@@ -79,7 +79,7 @@ Démarrage du PC –> Présence de Windows 8.1… Je supporte vraiment pas les t
 
 ————————————————-  
 
-2H de désactivation UEFI et secure boot…  
+2H de désactivation UEFI et secure boot…  
 
 *Formatage en cours pour une Fedora 21 Workstation…*  
 
@@ -91,19 +91,19 @@ Une fois démarré, le ZenBook tient ses promesses, à 30% de luminosité, le PC
 
 La qualité de l’écran est à mon goût irréprochable.  
 
-C’est une dalle mate, c’est pratique pour travailler.
+C’est une dalle mate, c’est pratique pour travailler.
 
 
 Deux petits haut-parleurs sont situés sous la machine, le rendu n’est pas très fort mais la qualité est là. Je préfère ça que l’inverse…
 
 
-En revanche quelques points négatifs :  
+En revanche quelques points négatifs :  
 
 – Le clavier est bruyant (encore plus flagrant du fait qu’il n’y a pas le bruit de souffle des ventilos)  
 
 – Le touchpad est vraiment pas top (on finit par s’y faire mais bon…)  
 
-– Carte Wi-Fi moins puissante (l’antenne ne doit pas être située dans l’écran)  
+– Carte Wi-Fi moins puissante (l’antenne ne doit pas être située dans l’écran)  
 
 – Les traces de doigts viennent gâcher le plaisir des yeux.  
 

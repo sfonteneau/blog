@@ -25,7 +25,7 @@ Le serveur Proxy répond :
 – Ok, voici la page que tu m’as demandé
 
 
-Il est au milieu dans le schéma :
+Il est au milieu dans le schéma :
 
 
 [![280px-Proxy_concept_en.svg](images/280px-Proxy_concept_en.svg_.751e60eb.png)](../wp-content/uploads/2015/04/280px-Proxy_concept_en.svg_.png)
@@ -37,13 +37,13 @@ Squid a donc une option de proxy transparent, cette option permet de se mettre �
 Pourquoi ?
 
 
-Le protocole HTTPS sécurise et chiffre la connexion sur tous les sites les plus connus, il peut également vérifier que la connexion n’a pas été usurpée par un pirate. (vérification du nom de domaine, des certificats et validation par un certificat root). Bref ce protocole a été créé dans le but de protéger une connexion.
+Le protocole HTTPS sécurise et chiffre la connexion sur tous les sites les plus connus, il peut également vérifier que la connexion n’a pas été usurpée par un pirate. (vérification du nom de domaine, des certificats et validation par un certificat root). Bref ce protocole a été créé dans le but de protéger une connexion.
 
 
 [![header_icon](images/header_icon.6f96c434.png)](../wp-content/uploads/2015/04/header_icon.png)
 
 
-Squid est capable d’intercepter du surf SSL en mode transparent mais cela nécessite l’installation préalable d’un ca-root. Cette méthode n’est pas du tout appréciée par les sites web, car elle consiste a décrypter la connexion HTTPS en cours. De plus, certains sites web n’utilisent pas le SSL mais le [SNI](http://www.rackspace.com/knowledge_center/article/serving-secure-sites-with-sni-on-apache "SNI").
+Squid est capable d’intercepter du surf SSL en mode transparent mais cela nécessite l’installation préalable d’un ça-root. Cette méthode n’est pas du tout appréciée par les sites web, car elle consiste a décrypter la connexion HTTPS en cours. De plus, certains sites web n’utilisent pas le SSL mais le [SNI](http://www.rackspace.com/knowledge_center/article/serving-secure-sites-with-sni-on-apache "SNI").
 
 
 Cette méthode est considérée comme une attaque man in the middle :

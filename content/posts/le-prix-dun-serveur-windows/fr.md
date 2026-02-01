@@ -15,7 +15,7 @@ Bonjour à tous !
 J’ai (enfin) décidé de faire un article sur Samba 4, qui va venir bientôt.
 
 
-Mais avant je sors un article « Le prix d’un serveur Windows » pour comprendre les économies potentielles !
+Mais avant je sors un article « Le prix d’un serveur Windows » pour comprendre les économies potentielles !
 
 
 Imaginons, je veux me faire un Windows Server avec Active Directory ; que dois-je payer ?
@@ -32,13 +32,13 @@ Mais avoir une licence Windows Server ne suffit pas pour avoir l’autorisation 
 Mais c’est quoi une CAL ? :
 
 
-La CAL (Client Access Licenses) Windows Server est obligatoire, dès qu’il y a « authentification » d’un poste (device) ou d’un utilisateur (user) pour accéder aux services de base de Windows Server (Active Directory, partage de fichiers et/ou d’imprimantes, etc…).
+La CAL (Client Access Licenses) Windows Server est obligatoire, dès qu’il y a « authentification » d’un poste (device) ou d’un utilisateur (user) pour accéder aux services de base de Windows Server (Active Directory, partage de fichiers et/ou d’imprimantes, etc…).
 
 
-La CAL par « user » est liée à un individu qui peut l’utiliser pour se connecter sur différents postes de travail.
+La CAL par « user » est liée à un individu qui peut l’utiliser pour se connecter sur différents postes de travail.
 
 
-La CAL par « device » est liée à un matériel et tous les utilisateurs de ce matériel peuvent l’utiliser.
+La CAL par « device » est liée à un matériel et tous les utilisateurs de ce matériel peuvent l’utiliser.
 
 
 Les versions des CAL utilisées doivent obligatoirement correspondre aux versions de Windows Server. (une CAL 2003 n’est pas valable pour Server 2008, **$$$** mais une CAL 2008 peut être downgradée pour un Server 2003)
@@ -47,7 +47,7 @@ Les versions des CAL utilisées doivent obligatoirement correspondre aux version
 En gros une licence Windows Server sans CAL ne sert à rien !
 
 
-Plus d’infos ici : <http://hebergement.u-psud.fr/distribution/acheter-a-la-di/microsoft/21-cal-client-acces-licence-microsoft.html>
+Plus d’infos ici : <http://hebergement.u-psud.fr/distribution/acheter-a-la-di/microsoft/21-cal-client-acces-licence-microsoft.html>
 
 
 Certaines versions de Windows Server ne nécessitent pas de CALs ou en ont d’inclues. Voir ici :  
@@ -57,7 +57,7 @@ Certaines versions de Windows Server ne nécessitent pas de CALs ou en ont d’i
 
 ![tumblr_n0xm24qMfD1rb2l1co1_400](images/tumblr_n0xm24qMfD1rb2l1co1_4001-300x210.745a20ae.gif)  
 
-Si vous avez plusieurs serveurs de virtualisation, (XenServer, Proxmox, VMware vSphere Hypervisor ou Microsoft Hyper-V), Microsoft vous demande de payer une licence de « déplacement » (si vous migrez vos serveurs virtuels d’un serveur physique à l’autre:
+Si vous avez plusieurs serveurs de virtualisation, (XenServer, Proxmox, VMware vSphere Hypervisor ou Microsoft Hyper-V), Microsoft vous demande de payer une licence de « déplacement » (si vous migrez vos serveurs virtuels d’un serveur physique à l’autre:
 
 
 Plus d’infos ici :  

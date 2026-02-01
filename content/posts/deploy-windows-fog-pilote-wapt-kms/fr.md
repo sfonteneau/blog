@@ -9,9 +9,9 @@ key: "deploy-windows-fog-pilote-wapt-kms"
 J’ai décidé de vous faire une petite compile de tout les tuto wiki utilisé.
 
 
-Tout les tuto sont dispo sur [reseaux85.fr](http://reseaux85.fr/) dont je fais également partie  
+Tout les tuto sont dispo sur [reseaux85.fr](http://reseaux85.fr/) dont je fais également partie  
 
-Merci a tous les contributeurs (même les stagiaire 😉  si  si   )
+Merci a tous les contributeurs (même les stagiaire 😉  si  si)
 
 
 [![deploiement](images/deploiement.86bc018c.jpg)](../wp-content/uploads/2015/07/deploiement.jpg)
@@ -22,7 +22,7 @@ Donc voici ma procédure lors d’un déploiement (lien vers les wiki) :
 
 [– Installation d’un serveur WAPT](https://doc.wapt.fr/)  
 
-[– Installation d’un serveur FOG](http://reseaux85.fr/index.php?title=FOG_:_Installation_du_serveur_-_Cr%C3%A9ation_master_-_Upload) et [Configuration du serveur FOG](http://reseaux85.fr/index.php?title=Configuration_FOG)[– Installation d’un serveur KMS](http://reseaux85.fr/index.php?title=Installation_d%27un_serveur_KMS_-_Activation_des_Licences)  
+[– Installation d’un serveur FOG](http://reseaux85.fr/index.php?title=FOG_:_Installation_du_serveur_-_Cr%C3%A9ation_master_-_Upload) et [Configuration du serveur FOG](http://reseaux85.fr/index.php?title=Configuration_FOG)[– Installation d’un serveur KMS](http://reseaux85.fr/index.php?title=Installation_d%27un_serveur_KMS_-_Activation_des_Licences)  
 
 – Installation d’un Windows 7 Vierge (avec cle générique KMS)  
 
@@ -48,17 +48,17 @@ Donc voici ma procédure lors d’un déploiement (lien vers les wiki) :
 
 – Au premier démarrage dans le domaine, le waptdeploy install wapt  
 
-[– Wapt install ensuite tout les logiciels demandés](http://wiki.lesfourmisduweb.org/index.php/Installation_et_utilisation_Serveur_et_console_WAPT#Gestion_des_Pc_et_des_paquets_dans_la_console)– Utilisation       🙂  
+[– Wapt install ensuite tout les logiciels demandés](http://wiki.lesfourmisduweb.org/index.php/Installation_et_utilisation_Serveur_et_console_WAPT#Gestion_des_Pc_et_des_paquets_dans_la_console)– Utilisation  🙂  
 
-– Mise à jour Windows avec wsus ( pour économiser la bande passante )  
+– Mise à jour Windows avec wsus (pour économiser la bande passante)  
 
 – Mise en place du SRP pour éviter de pourrir la machine.
 
 
-L’avantage de ce type de fonctionnement (fog et wapt) c ‘est que en cas de « plantage » d’un poste, si le wake on lan est ok sur le poste. Je n’est même pas a bouger de mon bureau…    sauf pour du hardware.
+L’avantage de ce type de fonctionnement (fog et wapt) c ‘est que en cas de « plantage » d’un poste, si le wake on lan est ok sur le poste. Je n’est même pas a bouger de mon bureau…  sauf pour du hardware.
 
 
- 
+ 
 
 
 [![INTRO_TEND2010](images/INTRO_TEND2010-300x200.814e6d12.jpg)](../wp-content/uploads/2015/07/INTRO_TEND2010.jpg)

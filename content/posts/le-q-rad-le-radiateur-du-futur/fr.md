@@ -22,7 +22,7 @@ D’un coté, il y a Amazon, Google, Facebook… qui utilisent de gros datacente
 Et de l’autre côté il y a nous. On utilise des chauffages, chauffe-eau, et climatisation qui consomment également beaucoup électricité.
 
 
-C’est quoi un Q.RAD ?   Ça ressemble a ça :
+C’est quoi un Q.RAD ?  Ça ressemble a ça :
 
 
 [![h60-b5-0010_2403284](images/h60-b5-0010_2403284-300x187.6f305929.jpg)](../wp-content/uploads/2015/08/h60-b5-0010_2403284.jpg)
@@ -52,7 +52,7 @@ Et cela permettrai en plus pour l’utilisateur de reprendre la main sur ses don
 Je vois également un avenir pour ceux qui font du bitcoin (minage), vous avez avec le q.rad une puissance de calcul qui ne reste pas allumé pour rien.
 
 
-Vous pouvez aussi proposer votre puissance de calcul fournis par les Q.RAD  moyennant  finance afin de ne plus payer votre électricité.
+Vous pouvez aussi proposer votre puissance de calcul fournis par les Q.RAD  moyennant  finance afin de ne plus payer votre électricité.
 
 
 Présentation vidéo du Q.RAD :

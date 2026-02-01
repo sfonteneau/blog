@@ -15,7 +15,7 @@ Il y a peu de temps j’ai découvert RPYC <https://rpyc.readthedocs.io/en/lates
 L’outil est pratique pour piloter des machines a distance a travers ssh.
 
 
-Pourquoi ne pas utiliser Ansible  ?
+Pourquoi ne pas utiliser Ansible  ?
 
 
 Disons que c’est une méthode différente.  

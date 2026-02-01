@@ -13,10 +13,10 @@ On est en règle général tous d’accord pour dire qu’iptables est une solut
 
 J’ai découvert **Shorewall** a mon nouveau boulot chez tranquilit  
 
-**Shorewall** est une surcouche a iptables ,  permettant de simplifier celui-ci.
+**Shorewall** est une surcouche a iptables,  permettant de simplifier celui-ci.
 
 
-J’aime de plus en plus les solutions sans fioriture, pas d’interface web, le tous se résume en quelques fichiers de conf qui deviennent simple a « backuper ».
+J’aime de plus en plus les solutions sans fioriture, pas d’interface web, le tous se résume en quelques fichiers de conf qui deviennent simple a « backuper ».
 
 
 Le problème avec les solutions tout empaqueter comme pfsense (je ne crache pas sur pfsense non plus) c’est qu’on ne sait pas trop ce qui se passe derrière. J’aime pas trop ça pour débugger c’est pas le top.

@@ -20,7 +20,7 @@ Revenons a la base, pourquoi l’https a été inventé ?
 Dans les entreprise, la nécessité de chiffrer le flux pour éviter qu’un pirate ne puisse récupérer des information sensible devient une nécessité, notamment pour les banques. Les sites de vente en ligne …
 
 
-Principe de fonctionnement : Le navigateur est capable de vérifier qu’il discute avec le bon serveur grâce au certificat du site web. La connexion est chiffrée et donc illisible par un attaquent positionner sur un routeur par exemple.   Un petite révolution ! On peu maintenant être certain de discuter avec le bon serveur de manière chiffré !
+Principe de fonctionnement : Le navigateur est capable de vérifier qu’il discute avec le bon serveur grâce au certificat du site web. La connexion est chiffrée et donc illisible par un attaquent positionner sur un routeur par exemple.  Un petite révolution ! On peu maintenant être certain de discuter avec le bon serveur de manière chiffré !
 
 
 ## C’est quoi le filtrage mitm ?
@@ -40,7 +40,7 @@ Ensuite lors du surf, le fwall va chiffrer la connexion avec sa clé et va ainsi
 ## Que doit on en penser ?
 
 
-Je ne blâme pas le principe…  En revanche il faut être clair avec ses utilisateurs en leurs indiquant la pratique !
+Je ne blâme pas le principe…  En revanche il faut être clair avec ses utilisateurs en leurs indiquant la pratique !
 
 
 En pratiquant le mitm il faut donc être rigoureux… l’appareil qui fait le filtrage est souvent le fwall, et l’ironie veut que c’est l’appareil qui est directement en frontale sur internet …

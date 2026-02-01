@@ -15,10 +15,10 @@ Bonjour
 Petit article rapide dans la catégorie **wapt**.
 
 
-Je viens de découvrir la cle registre « Preshutdowntimeout » dans windows.
+Je viens de découvrir la cle registre « Preshutdowntimeout » dans windows.
 
 
-Je vous laisse lire la partie « Maximum wait time for Group Policy scripts » ainsi que la partie « Change History ».
+Je vous laisse lire la partie « Maximum wait time for Group Policy scripts » ainsi que la partie « Change History ».
 
 
 <https://technet.microsoft.com/en-us/library/cc757265(v=ws.10).aspx>
@@ -56,7 +56,7 @@ smp-preshutdowntimeout
 http://wapt.lesfourmisduweb.org/wapt/
 
 
-Par défaut, le paquet modifie la valeur du Preshutdowntimeout de 15min à –> 3H, vous trouverez d’autre valeur, a l’intérieur du setup.py !
+Par défaut, le paquet modifie la valeur du Preshutdowntimeout de 15min à –> 3H, vous trouverez d’autre valeur, a l’intérieur du setup.py !
 
 
 Et c’est tout bon! c’est modifiée, j’ai créée un paquet de sleep de 40 minutes pour tester et c’est tout bon, ça marche !
