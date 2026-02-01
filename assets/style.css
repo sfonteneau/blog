@@ -307,6 +307,17 @@ html[data-theme="light"] .menu-toggle:hover{
   font-weight: 700;
   background: rgba(125, 200, 255, .12);
 }
+
+.pagination__ellipsis{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  color: var(--muted);
+  white-space: nowrap;
+}
 .pagination__link.is-disabled{
   opacity: .5;
 }
