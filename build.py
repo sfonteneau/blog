@@ -323,6 +323,16 @@ def build() -> None:
     for lc in posts_by_lang:
         posts_by_lang[lc].sort(key=lambda x: x.date, reverse=True)
 
+    # Pré-calcul pagination par langue (pour le sélecteur de langue sur les pages paginées)
+    index_posts_by_lang: Dict[str, List[Post]] = {
+        lc: [pp for pp in posts_by_lang.get(lc, []) if bool(getattr(pp, "listed", True))]
+        for lc in [l.code for l in languages]
+    }
+    total_pages_by_lang: Dict[str, int] = {
+        lc: max(1, (len(index_posts_by_lang.get(lc, [])) + posts_per_page - 1) // posts_per_page)
+        for lc in [l.code for l in languages]
+    }
+
 
     # Pré-calcul: retrouver un post par (key, lang) pour le menu
     post_dir_by_key_lang: Dict[tuple, Path] = {}
@@ -392,6 +402,35 @@ def build() -> None:
 
             view.append({"label": label, "href": href, "active": is_active})
         return view
+
+    def resolve_lang_links_for_index(out_dir: Path, page_num: int) -> Dict[str, str]:
+        """Retourne, pour chaque langue, le lien vers la "même" page d'index si elle existe.
+        Sinon, fallback vers la home de la langue."""
+        links: Dict[str, str] = {}
+        for l in languages:
+            lc = l.code
+            lang_root = DIST_DIR if lc == "fr" else (DIST_DIR / lc)
+            # Même numéro de page si possible
+            if page_num <= total_pages_by_lang.get(lc, 1):
+                target_dir = lang_root if page_num == 1 else (lang_root / "page" / str(page_num))
+            else:
+                target_dir = lang_root
+            links[lc] = rel_url(out_dir, target_dir) + "index.html"
+        return links
+
+    def resolve_lang_links_for_post(out_dir: Path, post_key: str) -> Dict[str, str]:
+        """Retourne, pour chaque langue, le lien vers la traduction du post si elle existe.
+        Sinon, fallback vers la home de la langue."""
+        links: Dict[str, str] = {}
+        for l in languages:
+            lc = l.code
+            lang_root = DIST_DIR if lc == "fr" else (DIST_DIR / lc)
+            target_dir = post_dir_by_key_lang.get((post_key, lc))
+            if target_dir is None:
+                target_dir = lang_root
+            links[lc] = rel_url(out_dir, target_dir) + "index.html"
+        return links
+
     # Render indexes (avec pagination)
     for lang in languages:
         lc = lang.code
@@ -400,7 +439,7 @@ def build() -> None:
         lang_root = DIST_DIR if lc == "fr" else (DIST_DIR / lc)
         lang_root.mkdir(parents=True, exist_ok=True)
 
-        index_posts = [pp for pp in lang_posts if bool(getattr(pp, "listed", True))]
+        index_posts = index_posts_by_lang.get(lc, [])
 
         total_pages = max(1, (len(index_posts) + posts_per_page - 1) // posts_per_page)
         for page_num in range(1, total_pages + 1):
@@ -470,6 +509,7 @@ def build() -> None:
                 rel=rel,
                 now_year=now_year,
                 languages=[{"code": l.code, "label": l.label, "path": l.path} for l in languages],
+                lang_links=resolve_lang_links_for_index(out_dir, page_num),
                 lang={"code": lang.code, "label": lang.label, "path": lang.path},
                 home_href=home_href,
             )
@@ -507,6 +547,7 @@ def build() -> None:
             rel=rel,
             now_year=now_year,
             languages=[{"code": l.code, "label": l.label, "path": l.path} for l in languages],
+            lang_links=resolve_lang_links_for_post(out_dir, p.key),
             lang=lang_obj,
             home_href=home_href,
         )

@@ -45,7 +45,12 @@
               {% if l.code == lang.code %}
                 <span class="lang-menu__item is-active" aria-current="true">{{ l.label }}</span>
               {% else %}
-                <a class="lang-menu__item" href="{{ rel }}{{ l.path }}index.html">{{ l.label }}</a>
+                {#
+                  Si la page courante existe dans une autre langue,
+                  on pointe vers l'équivalent (même page) au lieu de la home.
+                  Fallback: page d'accueil de la langue.
+                #}
+                <a class="lang-menu__item" href="{{ (lang_links[l.code] if lang_links and (l.code in lang_links) else (rel ~ l.path ~ 'index.html')) }}">{{ l.label }}</a>
               {% endif %}
             {% endfor %}
           </div>
