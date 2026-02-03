@@ -383,6 +383,9 @@ def build() -> None:
                 else:
                     target_dir = DIST_DIR / path
                 href = rel_url(out_dir, target_dir)
+              
+            if href == "/" :
+                href = home_ref
 
             # Active?
             is_active = False
