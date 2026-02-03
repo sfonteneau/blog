@@ -19,16 +19,13 @@
         <nav class="nav">
           {% for item in menu %}
             {% set href = item.href %}
+            {% set cls = "nav__link" ~ (" is-active" if item.active else "") %}
             {% if href.startswith('http://') or href.startswith('https://') %}
-              <a class="nav__link" href="{{ href }}" target="_blank" rel="noopener">{{ item.label }}</a>
+              <a class="{{ cls }}" href="{{ href }}" target="_blank" rel="noopener"{% if item.active %} aria-current="page"{% endif %}>{{ item.label }}</a>
             {% elif href.startswith('mailto:') %}
-              <a class="nav__link" href="{{ href }}">{{ item.label }}</a>
-            {% elif href == '/' %}
-              <a class="nav__link" href="{{ rel }}/index.html">{{ item.label }}</a>
-            {% elif href == '/en/' %}
-              <a class="nav__link" href="{{ rel }}/en/index.html">{{ item.label }}</a>
+              <a class="{{ cls }}" href="{{ href }}"{% if item.active %} aria-current="page"{% endif %}>{{ item.label }}</a>
             {% else %}
-              <a class="nav__link" href="{{ href }}">{{ item.label }}</a>
+              <a class="{{ cls }}" href="{{ href }}"{% if item.active %} aria-current="page"{% endif %}>{{ item.label }}</a>
             {% endif %}
           {% endfor %}
         </nav>

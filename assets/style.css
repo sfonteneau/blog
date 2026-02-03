@@ -70,6 +70,15 @@ html[data-theme="light"] .site-header{
   border-color: var(--line);
   background: rgba(255,255,255,.04);
 }
+
+.nav__link.is-active{
+  color: var(--text);
+  border-color: var(--line);
+  background: rgba(255,255,255,.06);
+}
+html[data-theme="light"] .nav__link.is-active{
+  background: rgba(0,0,0,.06);
+}
 html[data-theme="light"] .nav__link:hover{
   background: rgba(0,0,0,.03);
 }

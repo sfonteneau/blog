@@ -78,6 +78,9 @@ class Post:
     title: str
     slug: str
     date: date
+    show_date: bool
+    show_reading_time: bool
+    listed: bool
     html: str
     excerpt: str
     translations: List[dict]
@@ -272,7 +275,26 @@ def build() -> None:
         if not (title and slug and lang and key and fm.get("date")):
             raise ValueError(f"{md_path}: champs requis manquants (title, date, slug, lang, key).")
         d = parse_date(fm.get("date"), md_path)
-        raw_posts.append({"path": md_path, "title": title, "slug": slug, "lang": lang, "key": key, "date": d, "body": body})
+        show_date = fm.get("show_date", fm.get("display_date", fm.get("showDate", None)))
+        if show_date is None:
+            # Support hide_date: true
+            hide_date = fm.get("hide_date", fm.get("hideDate", False))
+            show_date = not bool(hide_date)
+        show_date = bool(show_date)
+
+        show_reading_time = fm.get("show_reading_time", fm.get("display_reading_time", fm.get("showReadingTime", None)))
+        if show_reading_time is None:
+            hide_rt = fm.get("hide_reading_time", fm.get("hideReadingTime", False))
+            show_reading_time = not bool(hide_rt)
+        show_reading_time = bool(show_reading_time)
+
+        listed = fm.get("listed", fm.get("show_in_list", fm.get("showInList", None)))
+        if listed is None:
+            # Support unlisted: true / hide_from_list: true
+            unlisted = fm.get("unlisted", fm.get("hide_from_list", fm.get("hideFromList", False)))
+            listed = not bool(unlisted)
+        listed = bool(listed)
+        raw_posts.append({"path": md_path, "title": title, "slug": slug, "lang": lang, "key": key, "date": d, "show_date": show_date, "show_reading_time": show_reading_time, "listed": listed, "body": body})
 
     # group by key -> lang -> post
     by_key: Dict[str, Dict[str, dict]] = {}
@@ -293,7 +315,7 @@ def build() -> None:
             processed = process_images_in_text(rp["body"], rp["path"], rel_from_post)
             html = md.markdown(processed, extensions=["fenced_code", "tables", "toc"], output_format="html5")
             excerpt = make_excerpt(html)
-            posts.append(Post(key=key, lang=lang_code, title=rp["title"], slug=rp["slug"], date=rp["date"], html=html, excerpt=excerpt, translations=translations))
+            posts.append(Post(key=key, lang=lang_code, title=rp["title"], slug=rp["slug"], date=rp["date"], show_date=bool(rp.get("show_date", True)), show_reading_time=bool(rp.get("show_reading_time", True)), listed=bool(rp.get("listed", True)), html=html, excerpt=excerpt, translations=translations))
 
     posts_by_lang: Dict[str, List[Post]] = {}
     for p in posts:
@@ -301,6 +323,75 @@ def build() -> None:
     for lc in posts_by_lang:
         posts_by_lang[lc].sort(key=lambda x: x.date, reverse=True)
 
+
+    # Pré-calcul: retrouver un post par (key, lang) pour le menu
+    post_dir_by_key_lang: Dict[tuple, Path] = {}
+    post_slug_by_key_lang: Dict[tuple, str] = {}
+    for p in posts:
+        if p.lang == "fr":
+            ddir = DIST_DIR / p.slug
+        else:
+            ddir = DIST_DIR / "en" / p.slug
+        post_dir_by_key_lang[(p.key, p.lang)] = ddir
+        post_slug_by_key_lang[(p.key, p.lang)] = p.slug
+
+    def resolve_menu_for_page(out_dir: Path, lang_code: str, current_slug: Optional[str], is_index: bool) -> List[dict]:
+        """Construit un menu 'prêt à afficher' (href relatifs + item actif).
+        Supporte:
+          - href: (http/https, mailto, /, /en/, chemins internes)
+          - post_key / post: référence à un post par sa key (content/posts/<key>/...).
+        """
+        home_dir = DIST_DIR if lang_code == "fr" else (DIST_DIR / "en")
+        view = []
+        for item in menu:
+            label = item.get("label", "")
+            href_cfg = item.get("href")
+            post_key = item.get("post_key", item.get("post", item.get("key_post")))
+            target_dir = None
+            href = href_cfg
+
+            if post_key:
+                # lien vers un article identifié par sa key
+                target_dir = post_dir_by_key_lang.get((str(post_key), lang_code))
+                if target_dir is None:
+                    # fallback: première langue dispo
+                    target_dir = post_dir_by_key_lang.get((str(post_key), "fr")) or post_dir_by_key_lang.get((str(post_key), "en"))
+                if target_dir is not None:
+                    href = rel_url(out_dir, target_dir)
+
+            elif isinstance(href_cfg, str) and (href_cfg == "/" or href_cfg == "/en/"):
+                target_dir = home_dir if href_cfg == ("/" if lang_code == "fr" else "/en/") else (DIST_DIR if href_cfg == "/" else (DIST_DIR / "en"))
+                href = rel_url(out_dir, target_dir)
+
+            elif isinstance(href_cfg, str) and href_cfg.startswith("/") and not (href_cfg.startswith("mailto:") or href_cfg.startswith("http://") or href_cfg.startswith("https://")):
+                # chemin interne type "/slug/" ou "/en/slug/"
+                path = href_cfg.strip("/")
+                if path.startswith("en/"):
+                    target_dir = DIST_DIR / "en" / path[len("en/"):]
+                elif path == "":
+                    target_dir = DIST_DIR
+                else:
+                    target_dir = DIST_DIR / path
+                href = rel_url(out_dir, target_dir)
+
+            # Active?
+            is_active = False
+            if post_key and current_slug:
+                # si la page courante est ce post (par slug)
+                slug_here = current_slug
+                slug_target = None
+                if target_dir is not None:
+                    # target_dir name is slug folder
+                    slug_target = target_dir.name
+                is_active = (slug_target == slug_here)
+            elif is_index and target_dir is not None and (target_dir == home_dir or target_dir == DIST_DIR or target_dir == (DIST_DIR / "en")):
+                # pages d'accueil/pagination -> "Blog" actif (ou l'item qui pointe vers la home)
+                is_active = True
+            elif target_dir is not None and target_dir == out_dir:
+                is_active = True
+
+            view.append({"label": label, "href": href, "active": is_active})
+        return view
     # Render indexes (avec pagination)
     for lang in languages:
         lc = lang.code
@@ -309,7 +400,9 @@ def build() -> None:
         lang_root = DIST_DIR if lc == "fr" else (DIST_DIR / lc)
         lang_root.mkdir(parents=True, exist_ok=True)
 
-        total_pages = max(1, (len(lang_posts) + posts_per_page - 1) // posts_per_page)
+        index_posts = [pp for pp in lang_posts if bool(getattr(pp, "listed", True))]
+
+        total_pages = max(1, (len(index_posts) + posts_per_page - 1) // posts_per_page)
         for page_num in range(1, total_pages + 1):
             # Dossier de sortie pour cette page
             out_dir = lang_root if page_num == 1 else (lang_root / "page" / str(page_num))
@@ -328,7 +421,7 @@ def build() -> None:
             # Slice des posts affichés
             start = (page_num - 1) * posts_per_page
             end = start + posts_per_page
-            page_posts = lang_posts[start:end]
+            page_posts = index_posts[start:end]
 
             # URL relative depuis la page d'index vers les posts (dans le dossier de la langue)
             depth_in_lang = 0 if page_num == 1 else 2
@@ -339,6 +432,8 @@ def build() -> None:
                     "title": p.title,
                     "date_iso": p.date_iso,
                     "date_human": p.date_human,
+                    "show_date": bool(getattr(p, "show_date", True)),
+                    "show_reading_time": bool(getattr(p, "show_reading_time", True)),
                     "reading_time": p.reading_time,
                     "excerpt": p.excerpt,
                     "url": f"{post_prefix}/{p.slug}/" if post_prefix != "." else f"./{p.slug}/",
@@ -362,7 +457,7 @@ def build() -> None:
             index_html = env.get_template("index.html").render(
                 page_title=site["title"],
                 site=site,
-                menu=menu,
+                menu=resolve_menu_for_page(out_dir, lc, None, True),
                 posts=view_posts,
                 pagination={
                     "enabled": total_pages > 1,
@@ -398,11 +493,13 @@ def build() -> None:
         post_html = env.get_template("post.html").render(
             page_title=f"{p.title} — {site['title']}",
             site=site,
-            menu=menu,
+            menu=resolve_menu_for_page(out_dir, lang_obj['code'], p.slug, False),
             post={
                 "title": p.title,
                 "date_iso": p.date_iso,
                 "date_human": p.date_human,
+                    "show_date": bool(getattr(p, "show_date", True)),
+                "show_reading_time": bool(getattr(p, "show_reading_time", True)),
                 "reading_time": p.reading_time,
                 "html": p.html,
                 "translations": p.translations,

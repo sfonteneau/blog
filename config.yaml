@@ -19,7 +19,7 @@ menu:
   - label: "Git"
     href: "https://github.com/sfonteneau"
   - label: "Contact"
-    href: "mailto:blog@lesfourmisduweb.org"
+    post_key: "contact"
 
 # Pagination de la page d'accueil (liste des articles)
 pagination:

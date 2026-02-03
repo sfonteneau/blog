@@ -3,9 +3,9 @@
   <article class="post">
     <header class="post__header">
       <div class="post__meta">
-        <time datetime="{{ post.date_iso }}">{{ post.date_human }}</time>
-        <span class="dot">•</span>
-        <span class="muted">{{ post.reading_time }}</span>
+        {% if post.show_date %}<time datetime="{{ post.date_iso }}">{{ post.date_human }}</time>{% endif %}
+        {% if post.show_date and post.show_reading_time %}<span class="dot">•</span>{% endif %}
+        {% if post.show_reading_time %}<span class="muted">{{ post.reading_time }}</span>{% endif %}
       </div>
       <h1 class="post__title">{{ post.title }}</h1>
 

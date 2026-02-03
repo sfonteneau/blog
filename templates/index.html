@@ -9,9 +9,9 @@
     {% for p in posts %}
       <article class="card">
         <div class="card__meta">
-          <time datetime="{{ p.date_iso }}">{{ p.date_human }}</time>
-          <span class="dot">•</span>
-          <span class="muted">{{ p.reading_time }}</span>
+          {% if p.show_date %}<time datetime="{{ p.date_iso }}">{{ p.date_human }}</time>{% endif %}
+          {% if p.show_date and p.show_reading_time %}<span class="dot">•</span>{% endif %}
+          {% if p.show_reading_time %}<span class="muted">{{ p.reading_time }}</span>{% endif %}
         </div>
         <h2 class="card__title"><a href="{{ p.url }}">{{ p.title }}</a></h2>
         {% if p.excerpt %}<p class="card__excerpt">{{ p.excerpt }}</p>{% endif %}
