@@ -9,4 +9,10 @@ show_in_list: false
 show_reading_time: false
 ---
 
-toto
+Mail : blog@lesfourmisduweb.org
+
+[Linkedin](https://www.linkedin.com/in/sfonteneau/)
+
+[Twitter](https://x.com/simonfonteneau)
+
+[GitHub](https://github.com/sfonteneau)
