@@ -55,7 +55,7 @@ import markdown as md
 
 
 ROOT = Path(__file__).resolve().parent
-POSTS_DIR = ROOT / "content" / "posts"
+POSTS_DIR = ROOT / "content"
 DIST_DIR = ROOT / "dist"
 ASSETS_DIR = DIST_DIR / "assets"
 CONFIG_FILE = ROOT / "config.yaml"
