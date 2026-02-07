@@ -6,7 +6,7 @@ lang: "en"
 key: "adcs-linux"
 ---
 
-![adcs_linux](images/adcs_linux.png)
+![adcs_linux](images/adcs_linux.jpg)
 
 Hello everyone,
 
