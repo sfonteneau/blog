@@ -8,7 +8,7 @@ key: "letsencrypt-actalis"
 
 Bonjour à tous,
 
-Pour tester une autre autorité de certification, j’ai remplacé certains de mes certificats TLS **Let’s Encrypt** par des certificats gratuits émis par **Actalis**.
+Pour tester une autre autorité de certification, j’ai remplacé certains de mes certificats TLS **Let’s Encrypt** par des certificats gratuits émis par **[Actalis](https://www.actalis.com/)**.
 
 L’émission et le déploiement se sont déroulés sans difficulté. Les certificats sont correctement reconnus par les navigateurs et les différents clients utilisés lors de mes tests.
 
