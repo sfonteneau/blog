@@ -8,7 +8,7 @@ key: "letsencrypt-actalis"
 
 Hello everyone,
 
-To try another certificate authority, I replaced some of my **Let’s Encrypt** TLS certificates with free certificates issued by **Actalis**.
+To try another certificate authority, I replaced some of my **Let’s Encrypt** TLS certificates with free certificates issued by **[Actalis](https://www.actalis.com/)**.
 
 The issuance and deployment process went smoothly. The certificates are correctly recognized by the browsers and the various clients used during my tests.
 
