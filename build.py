@@ -238,14 +238,18 @@ def compute_rel(depth: int) -> str:
     return "." if depth == 0 else "/".join([".."] * depth)
 
 
-def copy_static_assets() -> None:
-    # Copy assets/style.css + assets/theme.js -> dist/assets/
+def copy_static_assets(style: str = "style.css") -> None:
     ASSETS_DIR.mkdir(parents=True, exist_ok=True)
-    for name in ("style.css", "theme.js"):
-        src = ASSETS_SRC_DIR / name
-        if not src.exists():
-            raise FileNotFoundError(f"Fichier asset manquant: {src}")
-        shutil.copy2(src, ASSETS_DIR / name)
+
+    src = ASSETS_SRC_DIR / style
+    if not src.exists():
+        raise FileNotFoundError(f"Fichier asset manquant: {src}")
+    shutil.copy2(src, ASSETS_DIR / "style.css")
+
+    src = ASSETS_SRC_DIR / "theme.js"
+    if not src.exists():
+        raise FileNotFoundError(f"Fichier asset manquant: {src}")
+    shutil.copy2(src, ASSETS_DIR / "theme.js")
 
 
 def build() -> None:
@@ -257,7 +261,7 @@ def build() -> None:
         posts_per_page = 10
 
     ensure_clean_dir(DIST_DIR)
-    copy_static_assets()
+    copy_static_assets(cfg.get("style", "style.css"))
 
     env = Environment(
         loader=FileSystemLoader(str(TEMPLATES_DIR)),
