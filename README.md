@@ -24,7 +24,7 @@ Résultat dans `dist/`.
 Le chemin du CSS est défini dans `config.yaml`. Il peut être relatif au YAML :
 
 ```yaml
-style: "assets/style8.css"
+style: "generator/assets/style8.css"
 ```
 
 ou absolu :
