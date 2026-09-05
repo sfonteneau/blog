@@ -3,7 +3,6 @@
 Ce dépôt contient uniquement les données et la configuration du blog :
 
 - `content/` : articles Markdown
-- `assets/` : CSS et JavaScript propres au site
 - `config.yaml` : configuration du blog
 - `.github/workflows/` : build et déploiement GitHub Pages
 - `generator/` : submodule Git contenant le moteur de génération
