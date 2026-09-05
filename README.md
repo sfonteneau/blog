@@ -7,26 +7,6 @@ Ce dépôt contient uniquement les données et la configuration du blog :
 - `.github/workflows/` : build et déploiement GitHub Pages
 - `generator/` : submodule Git contenant le moteur de génération
 
-## Ajouter le générateur comme submodule
-
-Créer/publier d'abord le dépôt du générateur, puis depuis ce dépôt :
-
-```bash
-git submodule add <URL_DU_DEPOT_GENERATEUR> generator
-git commit -m "Add static blog generator submodule"
-```
-
-Pour cloner ensuite le blog avec son générateur :
-
-```bash
-git clone --recurse-submodules <URL_DU_BLOG>
-```
-
-Sur un clone déjà existant :
-
-```bash
-git submodule update --init --recursive
-```
 
 ## Build local
 
