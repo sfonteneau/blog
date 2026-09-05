@@ -3,8 +3,8 @@ site:
   tagline: "An IT tech blog (and more)"
   author: "Simon Fonteneau"
   
-style: "assets/style8.css"
-theme: "assets/theme.js"
+style: "style8.css"
+theme: "theme.js"
 
 languages:
   - code: "fr"
