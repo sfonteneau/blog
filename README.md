@@ -1,14 +1,13 @@
 # Les Fourmis Du Web
 
-Ce dépôt contient uniquement les données et la configuration du blog :
+This repository contains only the blog data and configuration:
 
-- `content/` : articles Markdown
-- `config.yaml` : configuration du blog
-- `.github/workflows/` : build et déploiement GitHub Pages
-- `generator/` : submodule Git contenant le moteur de génération
+- `content/`: Markdown articles
+- `config.yaml`: blog configuration
+- `.github/workflows/`: GitHub Pages build and deployment
+- `generator/`: Git submodule containing the generation engine
 
-
-## Build local
+## Local build
 
 ```bash
 python -m venv .venv
@@ -17,18 +16,18 @@ pip install -r generator/requirements.txt
 python generator/build.py build --config config.yaml
 ```
 
-Résultat dans `dist/`.
+Output is generated in `dist/`.
 
 ## CSS
 
-Le chemin du CSS est défini dans `config.yaml`. Il peut être relatif au YAML :
+The CSS path is defined in `config.yaml`. It can be relative to the YAML file:
 
 ```yaml
 style: "generator/assets/style8.css"
 ```
 
-ou absolu :
+or absolute:
 
 ```yaml
-style: "/chemin/complet/vers/style.css"
+style: "/full/path/to/style.css"
 ```
