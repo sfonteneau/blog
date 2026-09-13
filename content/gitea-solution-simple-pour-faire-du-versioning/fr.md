@@ -9,7 +9,7 @@ key: "gitea-solution-simple-pour-faire-du-versioning"
 Article rapide pour vous présenter rapidement un produit que je découvre en ce moment: Gitea.
 
 
-![](images/gitea.4f30d5b1.png)
+![Logo Gitea](images/gitea.4f30d5b1.png)
 
 
 Gitea c’est quoi : c’est un service Git auto-hébergé sans prise de tête

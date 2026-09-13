@@ -6,7 +6,7 @@ lang: "en"
 key: "azure-ad-connect-et-openldap"
 ---
 
-![](images/azuezopenldap.ebfbf4b9.png)
+![Azure AD and OpenLDAP logos](images/azuezopenldap.ebfbf4b9.png)
 
 
 Hello everyone, another quick post,

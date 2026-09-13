@@ -6,7 +6,7 @@ lang: en
 key: wifi-freeradius-802-1x-squid-squidguard
 ---
 
-![SKU288251-03](images/SKU288251-03-300x300.fad7a7fa.gif)
+![Coffee mug decorated with a Wi-Fi symbol](images/SKU288251-03-300x300.fad7a7fa.gif)
 
 Some time ago I wrote “Why you shouldn’t use Squid in transparent mode?”. That covered filtering — but not authentication.
 
@@ -37,7 +37,7 @@ And it uses very little memory — it can run on a Raspberry Pi 🙂
 
 Today, I feel there’s still no ideal solution for public Wi‑Fi hotspots. Captive portals teach users to bypass SSL warnings, and they don’t work well with HSTS (e.g., Google as a default start page). 802.1X can’t easily present terms or SMS registration pages either. In a world full of “free Wi‑Fi”, we need real solutions that protect users **and** Internet providers.
 
-[![141106073506427079](images/141106073506427079-150x150.d21da2ff.jpg)](../wp-content/uploads/2016/03/141106073506427079.jpg)
+[![Browser warning page for an untrusted HTTPS certificate](images/141106073506427079-150x150.d21da2ff.jpg)](../wp-content/uploads/2016/03/141106073506427079.jpg)
 
 I’ll write a wiki tutorial when I have some time.
 

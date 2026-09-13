@@ -10,7 +10,7 @@ I just discovered a new deployment tool: **WAPT**.
 
 WAPT helps day‑to‑day operations by automating installations, uninstallations and updates of all software in an IT fleet.
 
-[![800px-Schema-wapt.svg](images/800px-Schema-wapt.svg_-300x111.41a808a6.png)](../wp-content/uploads/2015/01/800px-Schema-wapt.svg_.png)
+[![WAPT architecture diagram showing software deployment from a server to Windows clients](images/800px-Schema-wapt.svg_-300x111.41a808a6.png)](../wp-content/uploads/2015/01/800px-Schema-wapt.svg_.png)
 
 There is a “WAPT Starter” version that I use for individuals or small businesses (very close to APT on Linux): you install the desired software through a small web interface, and when updates are available in the WAPT repository (http://wapt.tranquil.it/wapt), it offers to install them automatically.
 

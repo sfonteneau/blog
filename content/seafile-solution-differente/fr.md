@@ -9,7 +9,7 @@ key: "seafile-solution-differente"
 Récemment, je vous ai parlé de nextcloud. Aujourd’hui je vous parle de seafiles
 
 
-![](images/seafilelogo-1024x256.7a4a4d5d.png)
+![Logo Seafile](images/seafilelogo-1024x256.7a4a4d5d.png)
 
 
 Seafile fonctionne différemment, sa vision est différente. Là où nextcloud va proposer un system de plugin et essayer d’être le plus polyvalent possible, Seafile va se concentrer sur la partie la plus importante: l’hébergement de fichier.

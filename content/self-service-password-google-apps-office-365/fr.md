@@ -6,7 +6,7 @@ lang: "fr"
 key: "self-service-password-google-apps-office-365"
 ---
 
-![change-your-password-623x427](images/change-your-password-623x427.96ed022b.jpg)
+![Champ de mot de passe avec des caractères masqués](images/change-your-password-623x427.96ed022b.jpg)
 
 
 Un petit article utile pour samba et Windows Active Directory
@@ -26,7 +26,7 @@ J’ai donc mis en place « Self Service Password »:
 C’est une page web qui permet de changer son mot de passe :
 
 
-[![ssp_change_nooptions](images/ssp_change_nooptions-150x150.363d600b.png)](../wp-content/uploads/2016/07/ssp_change_nooptions.png)
+[![Page Self Service Password permettant de changer un mot de passe](images/ssp_change_nooptions-150x150.363d600b.png)](../wp-content/uploads/2016/07/ssp_change_nooptions.png)
 
 
  

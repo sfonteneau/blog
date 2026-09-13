@@ -6,7 +6,7 @@ lang: "fr"
 key: "osticket-solution-de-gestion-de-ticket"
 ---
 
-![osticket-logo](images/osticket-logo-300x225.bf2157ef.jpg)  
+![Logo osTicket](images/osticket-logo-300x225.bf2157ef.jpg)  
 
 Je cherchais une solution de gestion des incidents puissante mais simple. J’ai essayé GLPI, mais cela ne m’a pas plu. Je voulais une solution sans authentification pour les clients, pas d’authentification pour déposer un ticket. Une personne hors établissement doit être capable de faire une demande de support.
 

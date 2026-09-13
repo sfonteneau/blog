@@ -6,7 +6,9 @@ lang: "fr"
 key: "solution-de-parfeu-simple-efficace"
 ---
 
-![](images/wall-159844_960_720.31db6f79.png)Petit article vite fait pour vous faire découvrir une solution simple et efficace.  
+![Illustration d’un pare-feu](images/wall-159844_960_720.31db6f79.png)
+
+Petit article vite fait pour vous faire découvrir une solution simple et efficace.  
 
 On est en règle général tous d’accord pour dire qu’iptables est une solution fiable et efficace mais dont la syntaxe est imbuvable.
 

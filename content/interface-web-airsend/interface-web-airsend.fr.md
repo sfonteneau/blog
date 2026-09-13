@@ -58,4 +58,4 @@ Pas besoin d’une plateforme domotique complète pour ça.
 
 Juste une petite interface web locale qui fait exactement ce dont j’ai besoin.
 
-![interface-web-airsend](images/interface-web-airsend.png)
+![Interface web AirSend avec commandes des volets et historique des températures sur mobile et ordinateur](images/interface-web-airsend.png)

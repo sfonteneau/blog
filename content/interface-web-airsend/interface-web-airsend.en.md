@@ -58,4 +58,4 @@ I do not need a complete home automation platform for that.
 
 Just a small local web interface that does exactly what I need.
 
-![interface-web-airsend](images/interface-web-airsend.png)
+![AirSend web interface showing shutter controls and temperature history on mobile and desktop](images/interface-web-airsend.png)

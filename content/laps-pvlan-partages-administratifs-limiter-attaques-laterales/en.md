@@ -6,9 +6,9 @@ lang: en
 key: laps-pvlan-partages-administratifs-limiter-attaques-laterales
 ---
 
-![](images/vaccin_anti_HPV.b0d9a88f.jpg)
+![3D figure holding a syringe](images/vaccin_anti_HPV.b0d9a88f.jpg)
 
-### Summary
+## Summary
 
 A new effective ransomware showed up: **NotPetya**.
 
@@ -21,19 +21,19 @@ When NotPetya manages to infect a workstation, it tries to recover passwords fro
 
 Below are several ways to block this.
 
-### Disable administrative shares
+## Disable administrative shares
 
 A first way to limit this propagation is to remove administrative shares from workstations.
 
 A package from my repository does that:
 https://wapt.lesfourmisduweb.org/tous-les-packages?recherche=smp-disabling-administrative
 
-### Use PVLAN
+## Use PVLAN
 
 Another method is to enable **private VLAN** (PVLAN) on your switches. In general, workstations have no reason to talk to each other directly.
 More info: https://fr.wikipedia.org/wiki/VLAN_privé
 
-### Enable LAPS
+## Enable LAPS
 
 Another recommendation is to deploy **LAPS**.
 
@@ -42,7 +42,7 @@ Unfortunately, for convenience, we often use the same local administrator passwo
 - LAPS on Microsoft AD: https://www.it-connect.fr/securite-proteger-les-comptes-administrateur-local-avec-laps/
 - LAPS with Samba4: https://dev.tranquil.it/wiki/SAMBA_-_Proteger_les_comptes_administrateurs_locaux_avec_LAPS
 
-### Firewall rules
+## Firewall rules
 
 On a Windows client there is usually no good reason to have services listening on random ports. Closing unnecessary ports is one of the best ways to limit lateral movement. (And by the way, a future WAPT version was planned to move away from its listening port 8088 to websockets.)
 

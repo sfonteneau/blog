@@ -6,7 +6,7 @@ lang: en
 key: maj-lutter-contre-ransomwares
 ---
 
-![detecter-logiciel-espion](images/detecter-logiciel-espion-300x225.df85a3ac.jpg)
+![Computer under attack while a figure protects it with a shield](images/detecter-logiciel-espion-300x225.df85a3ac.jpg)
 
 Some time ago I wrote a post: **“Fighting ransomware”**:
 
@@ -24,7 +24,7 @@ I collected ransomware samples from my spam inbox and started testing them one b
 - And of course: keep software up to date so vulnerabilities can’t be exploited. Example:
   http://www.lemondeinformatique.fr/actualites/lire-adobe-corrige-24-failles-dans-flash-player-dont-celle-utilisee-par-les-ransomwares-64462.html
 
-### Edit
+## Edit
 
 I’m only describing technical methods here.
 

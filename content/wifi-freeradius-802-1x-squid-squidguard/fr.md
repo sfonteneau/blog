@@ -6,7 +6,7 @@ lang: "fr"
 key: "wifi-freeradius-802-1x-squid-squidguard"
 ---
 
-![SKU288251-03](images/SKU288251-03-300x300.fad7a7fa.gif)
+![Tasse décorée d’un symbole Wi-Fi](images/SKU288251-03-300x300.fad7a7fa.gif)
 
 
 Il y a un moment maintenant déjà, j’avais fait un article « Pourquoi il ne faut pas utiliser Squid en mode transparent ? ». J’avais là ma solution de filtrage. Mais pas  forcément la solution d’authentification.
@@ -56,7 +56,7 @@ Et l’avantage, c’est que cela consomme très peu de mémoire. Je peux faire 
 Aujourd’hui, je trouve qu’il n’y a pas de solution pour les hotspot wifi. Les portails captifs habituent les utilisateurs à outrepasser les avertissements de sécurité ssl et de plus cela ne fonctionne pas avec les technologies hsts (typiquement pour google qui est très souvent la page de démarrage de nombreux navigateurs). Le 802.1x ne permet pas de faire accepter des conditions d’utilisation ou de faire une inscription sms avec une page web par exemple… Le 802.1x ne permet pas de faire accepter des conditions d’utilisation ou de faire une inscription sms avec une page web par exemple. Dans un monde où nous trouvons de plus en plus de « free wifi », il serait temps de trouver de vraies solutions pour protéger les utilisateurs **ET** le fournisseur d’accès internet.
 
 
-[![141106073506427079](images/141106073506427079-150x150.d21da2ff.jpg)](../wp-content/uploads/2016/03/141106073506427079.jpg)
+[![Page d’avertissement du navigateur pour un certificat HTTPS non approuvé](images/141106073506427079-150x150.d21da2ff.jpg)](../wp-content/uploads/2016/03/141106073506427079.jpg)
 
 
  Je vais faire un petit tuto sur mon wiki lorsque j’aurai un peu de temps

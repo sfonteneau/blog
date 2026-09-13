@@ -6,7 +6,7 @@ lang: en
 key: decouverte-rpyc
 ---
 
-![](images/Rpyc3-logo-medium.56e72187.png)
+![RPyC logo](images/Rpyc3-logo-medium.56e72187.png)
 
 Not long ago I discovered RPyC:
 https://rpyc.readthedocs.io/en/latest/

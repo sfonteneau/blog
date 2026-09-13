@@ -6,7 +6,7 @@ lang: en
 key: securites-mes-preconisations
 ---
 
-![](images/secu3.e84ba482.jpg)
+![Figure holding a Safety First sign](images/secu3.e84ba482.jpg)
 
 Hello everyone…
 

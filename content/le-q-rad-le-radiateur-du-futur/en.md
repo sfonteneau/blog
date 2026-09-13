@@ -12,13 +12,13 @@ The project started from a simple observation:
 
 On one side, Amazon/Google/Facebook… run huge datacenters that consume a lot of electricity, produce a lot of heat, and then consume even more electricity to cool everything down.
 
-[![server-90389_640](images/server-90389_640-300x200.ea9bc716.jpg)](../wp-content/uploads/2015/08/server-90389_640.jpg)
+[![Server racks in a datacenter](images/server-90389_640-300x200.ea9bc716.jpg)](../wp-content/uploads/2015/08/server-90389_640.jpg)
 
 On the other side, we use heaters, water heaters and air conditioning that also consume a lot of electricity.
 
 What is a Q.RAD? It looks like this:
 
-[![h60-b5-0010_2403284](images/h60-b5-0010_2403284-300x187.6f305929.jpg)](../wp-content/uploads/2015/08/h60-b5-0010_2403284.jpg)
+[![Q.RAD computing radiator installed beside a staircase](images/h60-b5-0010_2403284-300x187.6f305929.jpg)](../wp-content/uploads/2015/08/h60-b5-0010_2403284.jpg)
 
 The idea is simple: **decentralize servers** by placing them directly in people’s homes. The household gets heating “for free” (the heat produced by the server warms the room), and the server no longer needs a datacenter cooling system.
 

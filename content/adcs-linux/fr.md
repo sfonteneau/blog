@@ -6,7 +6,7 @@ lang: "fr"
 key: "adcs-linux"
 ---
 
-![adcs_linux](images/adcs_linux.jpg)
+![Illustration ADCS Python avec un certificat et des flèches de synchronisation](images/adcs_linux.jpg)
 
 Bonjour à tous,
 
@@ -47,14 +47,14 @@ Chaque modèle est représenté par un module externe (par exemple `callbacks/us
  → Prend le CSR et les métadonnées en entrée, applique les extensions nécessaires et émet le certificat signé par l'autorité de certification.
 
 
-#### Pourquoi utiliser des callbacks ?
+## Pourquoi utiliser des callbacks ?
 
 
 - Offre une **flexibilité maximale** : la logique du modèle peut dépendre des attributs Active Directory, de l'appartenance à un groupe, de politiques externes (API ERP) ou de toute règle métier.
 - Évite de verrouiller le serveur CA dans des modèles statiques et prédéfinis.
 
 
-#### Responsabilité en matière de sécurité
+## Responsabilité en matière de sécurité
 
 
 Cette conception transfère la plupart des contrôles de sécurité à l'auteur du callback. En pratique :

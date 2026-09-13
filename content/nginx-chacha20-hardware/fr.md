@@ -6,7 +6,7 @@ lang: "fr"
 key: "nginx-chacha20-hardware"
 ---
 
-![cpuimage](images/cpu.png)
+![Cadenas ouvert relié à des pistes de circuit électronique](images/cpu.png)
 
 Bonjour à tous,
 

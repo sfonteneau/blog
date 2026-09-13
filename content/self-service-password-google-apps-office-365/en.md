@@ -6,7 +6,7 @@ lang: en
 key: self-service-password-google-apps-office-365
 ---
 
-![change-your-password-623x427](images/change-your-password-623x427.96ed022b.jpg)
+![Password field with masked characters](images/change-your-password-623x427.96ed022b.jpg)
 
 A useful post for Samba and Windows Active Directory.
 
@@ -19,7 +19,7 @@ http://ltb-project.org/wiki/documentation/self-service-password
 
 It’s a web page that allows users to change their password:
 
-[![ssp_change_nooptions](images/ssp_change_nooptions-150x150.363d600b.png)](../wp-content/uploads/2016/07/ssp_change_nooptions.png)
+[![Self Service Password page for changing a password](images/ssp_change_nooptions-150x150.363d600b.png)](../wp-content/uploads/2016/07/ssp_change_nooptions.png)
 
 But it can go further. If a password is forgotten, it can offer multiple reset methods:
 - Reset by questions

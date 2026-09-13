@@ -6,7 +6,7 @@ lang: "en"
 key: "nginx-chacha20-hardware"
 ---
 
-![cpuimage](images/cpu.png)
+![Open padlock connected to electronic circuit traces](images/cpu.png)
 
 Hello everyone,
 

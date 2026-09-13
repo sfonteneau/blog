@@ -6,7 +6,7 @@ lang: en
 key: le-prix-dun-serveur-windows
 ---
 
-![02748596-photo-verrou-drm](images/02748596-photo-verrou-drm1-300x225.e6f09edf.jpg)
+![Optical disc secured with chains and a padlock](images/02748596-photo-verrou-drm1-300x225.e6f09edf.jpg)
 
 Hello everyone!
 
@@ -41,7 +41,7 @@ http://hebergement.u-psud.fr/distribution/acheter-a-la-di/microsoft/21-cal-clien
 Some Windows Server editions don’t need CALs or include some. See:
 http://www.microsoft.com/OEM/fr/licensing/productlicensing/Pages/server-cal.aspx#fbid=pWJXAn-6Z9m
 
-![tumblr_n0xm24qMfD1rb2l1co1_400](images/tumblr_n0xm24qMfD1rb2l1co1_4001-300x210.745a20ae.gif)
+![Woman gesturing beside the French text “Et c’est pas fini !”](images/tumblr_n0xm24qMfD1rb2l1co1_4001-300x210.745a20ae.gif)
 
 ## Virtualization mobility licensing
 

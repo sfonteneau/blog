@@ -6,7 +6,7 @@ lang: en
 key: solution-de-parfeu-simple-efficace
 ---
 
-![](images/wall-159844_960_720.31db6f79.png)
+![Firewall illustration](images/wall-159844_960_720.31db6f79.png)
 
 A quick post to introduce a simple and effective solution.
 

@@ -6,7 +6,7 @@ lang: "fr"
 key: "streamer-le-son-le-votre-client-linux-sur-une-tele-ou-rasp"
 ---
 
-![dlna-100018023-medium](images/dlna-100018023-medium-300x214.9a3dad56.jpg)
+![Réseau domestique partageant musique et médias entre plusieurs appareils](images/dlna-100018023-medium-300x214.9a3dad56.jpg)
 
 
 Si comme moi vous utilisez un Linux Desktop, il peut être intéressant d’envoyer le son de votre cher OS préféré sur votre télé.
@@ -30,13 +30,13 @@ Principe de fonctionnement :
 Vous pouvez choisir vers quoi envoyer.
 
 
-![toto](images/toto-237x300.9fa7b603.png)
+![Menu de sortie audio avec DLNA/UPnP Streaming sélectionné](images/toto-237x300.9fa7b603.png)
 
 
 Il ne faut pas s’attendre a un envoi instantané, il y a quand même 4 secondes de latence entre la lecture réelle et l’écoute.
 
 
-![IMG_3051](images/IMG_30511-300x225.c107cff7.jpg)
+![Lecteur multimédia d’un téléviseur recevant un flux audio via DLNA](images/IMG_30511-300x225.c107cff7.jpg)
 
 
 Si cela vous intéresse, vous pouvez suivre ces tutos :  

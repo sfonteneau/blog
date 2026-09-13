@@ -6,7 +6,7 @@ lang: "fr"
 key: "securites-mes-preconisations"
 ---
 
-![](images/secu3.e84ba482.jpg)  
+![Personnage tenant une pancarte « Safety First »](images/secu3.e84ba482.jpg)  
 
 Bonjour à tous …
 

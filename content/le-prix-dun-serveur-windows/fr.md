@@ -6,7 +6,7 @@ lang: "fr"
 key: "le-prix-dun-serveur-windows"
 ---
 
-![02748596-photo-verrou-drm](images/02748596-photo-verrou-drm1-300x225.e6f09edf.jpg)
+![Disque optique entouré de chaînes et fermé par un cadenas](images/02748596-photo-verrou-drm1-300x225.e6f09edf.jpg)
 
 
 Bonjour à tous !
@@ -55,7 +55,7 @@ Certaines versions de Windows Server ne nécessitent pas de CALs ou en ont d’i
 <http://www.microsoft.com/OEM/fr/licensing/productlicensing/Pages/server-cal.aspx#fbid=pWJXAn-6Z9m>
 
 
-![tumblr_n0xm24qMfD1rb2l1co1_400](images/tumblr_n0xm24qMfD1rb2l1co1_4001-300x210.745a20ae.gif)  
+![Femme faisant un geste à côté du texte « Et c’est pas fini ! »](images/tumblr_n0xm24qMfD1rb2l1co1_4001-300x210.745a20ae.gif)  
 
 Si vous avez plusieurs serveurs de virtualisation, (XenServer, Proxmox, VMware vSphere Hypervisor ou Microsoft Hyper-V), Microsoft vous demande de payer une licence de « déplacement » (si vous migrez vos serveurs virtuels d’un serveur physique à l’autre:
 

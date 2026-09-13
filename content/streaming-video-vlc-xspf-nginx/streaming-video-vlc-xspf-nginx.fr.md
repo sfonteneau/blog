@@ -6,7 +6,7 @@ lang: "fr"
 key: "streaming-video-vlc-xspf-nginx"
 ---
 
-![vlc](images/vlcnginxxspf.png)
+![Schéma de diffusion vidéo de VLC via XSPF et nginx en HTTP](images/vlcnginxxspf.png)
 
 Bonjour à tous,
 

@@ -6,7 +6,7 @@ lang: "fr"
 key: "apache-guacamole-alternative-au-vpn-pour-vos-utilisateurs"
 ---
 
-![](images/guac-tricolor-300x300.4bd742ff.png)
+![Logo Apache Guacamole](images/guac-tricolor-300x300.4bd742ff.png)
 
 
 Petite présentation rapide du produit même si plusieurs blog en parlent déjà.

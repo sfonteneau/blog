@@ -6,7 +6,7 @@ lang: "fr"
 key: "maj-lutter-contre-ransomwares"
 ---
 
-![detecter-logiciel-espion](images/detecter-logiciel-espion-300x225.df85a3ac.jpg)
+![Ordinateur attaqué par une menace tandis qu’un personnage le protège avec un bouclier](images/detecter-logiciel-espion-300x225.df85a3ac.jpg)
 
 
 Il y a quelque temps j’avais fait un article « **Lutter contre les ransomwares »** :
@@ -37,7 +37,7 @@ Basculer le **« Paramètre de notification de Macro VBA »** a **« Désactiver
 **Et bien sûr, maintenir son parc de logiciel à jour pour éviter qu’une faille de sécurité soit exploitée.** Exemple: (http://www.lemondeinformatique.fr/actualites/lire-adobe-corrige-24-failles-dans-flash-player-dont-celle-utilisee-par-les-ransomwares-64462.html)
 
 
-### **Édit :**
+## **Édit :**
 
 
 Je me contente ici de décrire techniquement et froidement les méthodes.

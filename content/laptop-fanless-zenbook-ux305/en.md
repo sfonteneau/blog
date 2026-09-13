@@ -12,25 +12,25 @@ Fanless has some advantages:
 - No noise, and you don’t have to blow dust out of it every other day.
 - No fans means much less dust.
 
-[![composant-ordinateur-sale-poussiere-004-480x292](images/composant-ordinateur-sale-poussiere-004-480x292-300x183.267695cb.jpg)](../wp-content/uploads/2015/04/composant-ordinateur-sale-poussiere-004-480x292.jpg)
+[![Computer motherboard covered with dust](images/composant-ordinateur-sale-poussiere-004-480x292-300x183.267695cb.jpg)](../wp-content/uploads/2015/04/composant-ordinateur-sale-poussiere-004-480x292.jpg)
 
 I wanted something thin, so I started looking.
 
 First, the new MacBook (yes, I seriously considered it), but technically everything goes through a single USB‑C port (the only port). Not practical.
 
-[![Capture du 2015-04-23 23:59:01](images/Capture-du-2015-04-23-235901-300x59.822e056d.png)](../wp-content/uploads/2015/04/Capture-du-2015-04-23-235901.png)
+[![Side profile of a thin MacBook with its USB-C cable](images/Capture-du-2015-04-23-235901-300x59.822e056d.png)](../wp-content/uploads/2015/04/Capture-du-2015-04-23-235901.png)
 
 For a simple USB stick you need an adapter… and the entry model was around 1449€ with 256 GB storage. So… nope.
 
 Then I looked at the Samsung ATIV Book 9 (2015):
 
-[![ATIV-Book-9-PLUS-2](images/ATIV-Book-9-PLUS-2-300x200.65952a9e.jpg)](../wp-content/uploads/2015/04/ATIV-Book-9-PLUS-2.jpg)
+[![Samsung ATIV Book 9 Plus laptop](images/ATIV-Book-9-PLUS-2-300x200.65952a9e.jpg)](../wp-content/uploads/2015/04/ATIV-Book-9-PLUS-2.jpg)
 
 4 GB RAM, 128 GB SSD, Intel Core M 0.9 GHz. With fanless you can’t clock too high. Nice, but still around $1200.
 
 And then I found this:
 
-[![ASUS-ZENBOOK-UX305_678x452](images/ASUS-ZENBOOK-UX305_678x452-300x169.aac2e3ce.jpg)](../wp-content/uploads/2015/04/ASUS-ZENBOOK-UX305_678x452.jpg)
+[![ASUS ZenBook UX305 viewed from the rear with the lid open](images/ASUS-ZENBOOK-UX305_678x452-300x169.aac2e3ce.jpg)](../wp-content/uploads/2015/04/ASUS-ZENBOOK-UX305_678x452.jpg)
 
 The **ASUS ZenBook UX305**: 4 GB RAM, 128 GB SSD, Intel Core M 0.8 GHz — 629€.
 
@@ -71,6 +71,6 @@ A few negatives:
 
 One more annoying detail: to cool the laptop, ASUS designed the hinge so the screen lifts the bottom — but it can scratch the chassis.
 
-[![IMG_3171](images/IMG_3171-300x200.c4213cea.png)](../wp-content/uploads/2015/04/IMG_3171.png)
+[![Close-up of the ZenBook UX305 chassis edge where the hinge can rub](images/IMG_3171-300x200.c4213cea.png)](../wp-content/uploads/2015/04/IMG_3171.png)
 
 Still, despite these flaws, I’m very happy with it so far!

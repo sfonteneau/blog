@@ -33,7 +33,7 @@ return proxy_yes;
 
 Great — it works in Chrome now! But then it no longer works at all in Firefox…
 
-[![ob_06116c_220-f-43166878-pf3admr4fspxhl3mi4x7fu7tkjooikqx](images/ob_06116c_220-f-43166878-pf3admr4fspxhl3mi4x7fu7tkjooikqx-300x200.9d8e4e94.jpg)](../wp-content/uploads/2015/11/ob_06116c_220-f-43166878-pf3admr4fspxhl3mi4x7fu7tkjooikqx.jpg)
+[![Frustrated woman pulling her hair](images/ob_06116c_220-f-43166878-pf3admr4fspxhl3mi4x7fu7tkjooikqx-300x200.9d8e4e94.jpg)](../wp-content/uploads/2015/11/ob_06116c_220-f-43166878-pf3admr4fspxhl3mi4x7fu7tkjooikqx.jpg)
 
 The only solution I found was to make sure Firefox never enters the `isInNetEx(myIpAddress()` loop (to avoid crashing), and explicitly declare all possible cases.
 

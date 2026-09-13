@@ -6,7 +6,7 @@ lang: en
 key: gestion-wapt-all-in-one-package
 ---
 
-![](images/AllInOneBox-1.9acb66db.jpg)
+![All-in-one package illustration](images/AllInOneBox-1.9acb66db.jpg)
 
 Hi — it’s been a while! Today, a WAPT post 🙂
 

@@ -14,7 +14,7 @@ I first looked at replacing the head unit, but it was complicated (on‑board co
 
 ## 1) Belkin CarAudio Connect (FM)
 
-[![STD1_F8M117_20914](images/STD1_F8M117_20914.3df2ee23.jpg)](../wp-content/uploads/2015/08/STD1_F8M117_20914.jpg)
+[![Belkin CarAudio Connect FM transmitter with 12 V car adapter](images/STD1_F8M117_20914.3df2ee23.jpg)](../wp-content/uploads/2015/08/STD1_F8M117_20914.jpg)
 
 The idea is:
 
@@ -32,7 +32,7 @@ So I tried something else.
 
 ## 2) Parrot kit
 
-[![parrot-mki-9200](images/parrot-mki-9200-300x300.85136d50.jpg)](../wp-content/uploads/2015/08/parrot-mki-9200.jpg)
+[![Parrot MKi9200 Bluetooth hands-free car kit](images/parrot-mki-9200-300x300.85136d50.jpg)](../wp-content/uploads/2015/08/parrot-mki-9200.jpg)
 
 Parrot kits are nice: they can mute *all* audio during calls (unlike the two Belkin options), for example they cut the radio to ring your phone.
 
@@ -48,7 +48,7 @@ The YATOUR is clever, but not compatible with every car.
 
 It uses the CD‑changer connector on the back of the head unit (kind of like an AUX input).
 
-[![Capture du 2015-08-03 18:20:02](images/Capture-du-2015-08-03-182002-300x224.a1d3d616.png)](../wp-content/uploads/2015/08/Capture-du-2015-08-03-182002.png)
+[![Yatour Digital Music Changer module with its connection cables](images/Capture-du-2015-08-03-182002-300x224.a1d3d616.png)](../wp-content/uploads/2015/08/Capture-du-2015-08-03-182002.png)
 
 This box provides AUX, SD card and USB, plus optional iPod and Bluetooth.
 

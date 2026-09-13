@@ -6,7 +6,7 @@ lang: en
 key: preshutdowntimeout-le-timeout-windows
 ---
 
-[![time_out-bras](images/time_out-bras-300x128.6b9c3268.jpg)](../wp-content/uploads/2015/10/time_out-bras.jpg)
+[![Arm displaying a digital countdown timer](images/time_out-bras-300x128.6b9c3268.jpg)](../wp-content/uploads/2015/10/time_out-bras.jpg)
 
 Hello,
 

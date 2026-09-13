@@ -6,7 +6,7 @@ lang: "fr"
 key: "windows-to-linux-enterprise"
 ---
 
-![windows_to_linux](images/windows_to_linux.jpg)
+![Logos Windows et Linux reliés par des flèches bidirectionnelles](images/windows_to_linux.jpg)
 
 # De Windows à Linux en entreprise : construire le « bundle sysadmin »
 

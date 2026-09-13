@@ -14,7 +14,7 @@ Tout les tuto sont dispo sur [reseaux85.fr](http://reseaux85.fr/) dont je fais �
 Merci a tous les contributeurs (même les stagiaire 😉  si  si)
 
 
-[![deploiement](images/deploiement.86bc018c.jpg)](../wp-content/uploads/2015/07/deploiement.jpg)
+[![Boîte de déploiement contenant plusieurs paquets logiciels](images/deploiement.86bc018c.jpg)](../wp-content/uploads/2015/07/deploiement.jpg)
 
 
 Donc voici ma procédure lors d’un déploiement (lien vers les wiki) :
@@ -61,4 +61,4 @@ L’avantage de ce type de fonctionnement (fog et wapt) c ‘est que en cas de �
  
 
 
-[![INTRO_TEND2010](images/INTRO_TEND2010-300x200.814e6d12.jpg)](../wp-content/uploads/2015/07/INTRO_TEND2010.jpg)
+[![Homme observant un ordinateur portable avec des jumelles, illustration de l’administration à distance](images/INTRO_TEND2010-300x200.814e6d12.jpg)](../wp-content/uploads/2015/07/INTRO_TEND2010.jpg)

@@ -6,7 +6,7 @@ lang: "fr"
 key: "samba4-password-synchro"
 ---
 
-![](images/syncpassword.8eb6c67d.png)
+![Icône de synchronisation de mot de passe](images/syncpassword.8eb6c67d.png)
 
 
 Bonjour a tous

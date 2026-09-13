@@ -21,7 +21,7 @@ Je pars donc à la pêche et je vous fais un retour:
 **1er Test : Le Belkin CarAudio Connect FM**
 
 
-[![STD1_F8M117_20914](images/STD1_F8M117_20914.3df2ee23.jpg)](../wp-content/uploads/2015/08/STD1_F8M117_20914.jpg)
+[![Transmetteur FM Belkin CarAudio Connect avec adaptateur 12 V pour voiture](images/STD1_F8M117_20914.3df2ee23.jpg)](../wp-content/uploads/2015/08/STD1_F8M117_20914.jpg)
 
 
 En gros l’appareil fait :  
@@ -47,7 +47,7 @@ Du coup j’ai testé
 **Le Kit Parrot :**
 
 
-[![parrot-mki-9200](images/parrot-mki-9200-300x300.85136d50.jpg)](../wp-content/uploads/2015/08/parrot-mki-9200.jpg)
+[![Kit mains libres Bluetooth Parrot MKi9200](images/parrot-mki-9200-300x300.85136d50.jpg)](../wp-content/uploads/2015/08/parrot-mki-9200.jpg)
 
 
 Le kit parrot c’est bien ! Ça a l’avantage de couper tout le son lors d’un appelle (ce qui n’est pas le cas des deux solution au dessus), par exemple, ça coupe la radio pour faire sonner votre téléphone.  
@@ -71,7 +71,7 @@ La yatour est un système malin, mais qui n’est pas fonctionnel sur toutes les
 Il utilise la prise chargeur cd à l’arrière de l’autoradio. (une sorte d’auxiliaire finalement).
 
 
-[![Capture du 2015-08-03 18:20:02](images/Capture-du-2015-08-03-182002-300x224.a1d3d616.png)](../wp-content/uploads/2015/08/Capture-du-2015-08-03-182002.png)  
+[![Boîtier Yatour Digital Music Changer avec ses câbles de connexion](images/Capture-du-2015-08-03-182002-300x224.a1d3d616.png)](../wp-content/uploads/2015/08/Capture-du-2015-08-03-182002.png)  
 
 Du coup ce boîtier fait auxiliaire, carte SD, et USB. Et en option supplémentaires, iPod et bluetooth.
 

@@ -6,7 +6,7 @@ lang: "fr"
 key: "preshutdowntimeout-le-timeout-windows"
 ---
 
-[![time_out-bras](images/time_out-bras-300x128.6b9c3268.jpg)](../wp-content/uploads/2015/10/time_out-bras.jpg)
+[![Bras affichant un compte à rebours numérique](images/time_out-bras-300x128.6b9c3268.jpg)](../wp-content/uploads/2015/10/time_out-bras.jpg)
 
 
 Bonjour

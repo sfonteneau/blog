@@ -6,7 +6,7 @@ lang: "fr"
 key: "outils-dedition-collaborative-auto-hebergee"
 ---
 
-![](images/human-like-learning.dfbce8db.jpg)
+![Main humaine et main robotique écrivant côte à côte](images/human-like-learning.dfbce8db.jpg)
 
 
 Vous connaissez tous « google doc » ou « office online » ?
@@ -15,7 +15,7 @@ Vous connaissez tous « google doc » ou « office online » ?
 Ce genre d’outils est très prisé en environnement scolaire pour travailler avec des élèves ! En effet un groupe d’élèves qui travaille sur le même exposé peut travailler ensemble sur le même document avec chacun son ordinateur. C’est très puissant.
 
 
-![](images/office-365-vs-google-for-work1-300x146.13f679dc.png)
+![Logos Google for Work et Office 365](images/office-365-vs-google-for-work1-300x146.13f679dc.png)
 
 
 Il faut savoir que ce genre d’outils (google apps ou office 365) est gratuit en établissement scolaire. Si vous êtes une entreprise, le prix va rapidement augmenter. Egalement, l’idée de ne pas vraiment savoir où sont stockées les données est problématique pour la confidentialité. En plus, il vous faut avoir une connexion internet correcte pour que l’ensemble soit utilisable. Bref, il semble important de proposer une alternative !
@@ -46,13 +46,13 @@ Premier test; très concluant, très réactif ! Les deux solutions fonctionnent 
 Onlyoffice semble embarquer pas mal de fonctionnalités le produit est très abouti, rien à envier a google doc ou à word online, voir même il est mieux ! Très très bonne surprise ! A tester rapidement !
 
 
-![](images/Overview_01-1024x630.aa38c86b.png)
+![Interface de l’éditeur en ligne OnlyOffice](images/Overview_01-1024x630.aa38c86b.png)
 
 
 Libreoffice online fonctionne très bien également ! Moins de fonctionnalités mais répond très bien a mes besoin ! Faire du doc, du calc, du ppt.
 
 
-![](images/collabora01.7f2c1a1d.png)
+![Interface de l’éditeur Collabora Online](images/collabora01.7f2c1a1d.png)
 
 
 Onlyoffice dans sa version gratuite lui par contre a une limite à 20 utilisateurs simultanée. Au delà, il vous faudra prendre la [version payante.](https://www.onlyoffice.com/fr/enterprise-edition.aspx)
@@ -70,7 +70,7 @@ Bref, vous pouvez proposer a vos utilisateurs de reprendre la main sur leurs don
  
 
 
-### Subtilités technique rencontrée, et retour d’expérience.
+## Subtilités technique rencontrée, et retour d’expérience.
 
 
 Dans mes test j’ai installée les deux solution, onlyoffice et libreoffice online pour tester. Le tout couplée a un nextcloud
@@ -99,10 +99,9 @@ Pour contourner le problème j’ai créer un identifiant « next-cloud-share »
 Subtilités a comprendre donc …
 
 
-### 
 
 
-### Autre bonus du nextcloud:
+## Autre bonus du nextcloud:
 
 
 Nextcloud emarque un store d’application. Dans les application interessante :

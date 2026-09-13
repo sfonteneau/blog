@@ -6,7 +6,7 @@ lang: "en"
 key: "azure-ad-connect-samba4"
 ---
 
-![](images/AAD-Logosamba.45d2448b.png)
+![Azure AD and Samba logos](images/AAD-Logosamba.45d2448b.png)
 
 
 Hello

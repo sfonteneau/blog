@@ -6,7 +6,7 @@ lang: "en"
 key: "windows-to-linux-enterprise"
 ---
 
-![windows_to_linux](images/windows_to_linux.jpg)
+![Windows and Linux logos connected by bidirectional arrows](images/windows_to_linux.jpg)
 
 # Windows to Linux in the Enterprise: building the “sysadmin bundle”
 

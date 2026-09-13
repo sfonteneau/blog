@@ -6,13 +6,13 @@ lang: en
 key: outils-dedition-collaborative-auto-hebergee
 ---
 
-![](images/human-like-learning.dfbce8db.jpg)
+![Human hand and robotic hand writing side by side](images/human-like-learning.dfbce8db.jpg)
 
 Everyone knows Google Docs or Office Online.
 
 These tools are widely used in schools: a group of students can work together on the same document in real time from their own computers. Very powerful.
 
-![](images/office-365-vs-google-for-work1-300x146.13f679dc.png)
+![Google for Work and Office 365 logos](images/office-365-vs-google-for-work1-300x146.13f679dc.png)
 
 In schools, Google Workspace / Office 365 can be free, but in companies the price rises quickly. Also, not really knowing where your data is stored can be a confidentiality problem. And you need a decent Internet connection. So having an alternative matters.
 
@@ -29,11 +29,11 @@ First tests: very convincing and responsive. Both solutions work really well.
 
 OnlyOffice includes many features; it’s very mature and has nothing to envy Google Docs or Word Online — it might even be better. Great surprise.
 
-![](images/Overview_01-1024x630.aa38c86b.png)
+![OnlyOffice online editor interface](images/Overview_01-1024x630.aa38c86b.png)
 
 LibreOffice Online also works great — fewer features, but it fits my needs (docs, spreadsheets, presentations).
 
-![](images/collabora01.7f2c1a1d.png)
+![Collabora Online editor interface](images/collabora01.7f2c1a1d.png)
 
 OnlyOffice Community Edition is limited to 20 concurrent users; beyond that you need the [paid edition](https://www.onlyoffice.com/fr/enterprise-edition.aspx).
 

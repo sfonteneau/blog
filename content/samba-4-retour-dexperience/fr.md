@@ -6,7 +6,7 @@ lang: "fr"
 key: "samba-4-retour-dexperience"
 ---
 
-[![page_samba4](images/page_samba4.7eb97d89.png)](../wp-content/uploads/2015/03/page_samba4.png)
+[![Illustration Samba 4 Active Directory avec les logos Linux et Windows](images/page_samba4.7eb97d89.png)](../wp-content/uploads/2015/03/page_samba4.png)
 
 
 Dans mon précédent article j’ai parlé du prix exorbitant des licences Microsoft ; un simple Active Directory virtualisé coûte très cher !

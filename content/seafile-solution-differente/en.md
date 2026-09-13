@@ -8,7 +8,7 @@ key: seafile-solution-differente
 
 Recently I talked about Nextcloud. Today: **Seafile**.
 
-![](images/seafilelogo-1024x256.7a4a4d5d.png)
+![Seafile logo](images/seafilelogo-1024x256.7a4a4d5d.png)
 
 Seafile has a different vision. Where Nextcloud provides a plugin system and aims to be versatile, Seafile focuses on the core: **file hosting and synchronization**.
 

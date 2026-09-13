@@ -6,7 +6,7 @@ lang: en
 key: bloquer-le-reseau-tor
 ---
 
-![tor_browser_logo__no_trans_background__by_j_bob-d5gjsad](images/tor_browser_logo__no_trans_background__by_j_bob-d5gjsad-300x184.aa975f6d.png)
+![Tor Browser logo](images/tor_browser_logo__no_trans_background__by_j_bob-d5gjsad-300x184.aa975f6d.png)
 
 I work in a high school and a middle school, which means I have to prevent students from browsing non‑educational websites…
 
@@ -18,7 +18,7 @@ How it works:
 
 A first layer of protection is therefore to prevent clients from going directly to the Internet and to enforce a proxy. Only the proxy is allowed outbound access. Tor will scan and never find an exit.
 
-![jns_ch12-18](images/jns_ch12-18-300x157.c92ee60a.gif)
+![Network diagram where clients use an HTTP proxy and direct Internet access is blocked by the firewall](images/jns_ch12-18-300x157.c92ee60a.gif)
 
 But Tor can also work through a proxy (if configured). The principle is:
 Tor contacts a Tor IP through the proxy and keeps the connection open, then tunnels Tor traffic through it.

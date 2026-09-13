@@ -6,7 +6,7 @@ lang: en
 key: la-generalisation-du-filtrage-mitm
 ---
 
-![](images/wp-thumb.php_.9231a319.png)
+![Man-in-the-middle interception diagram between a client and a server](images/wp-thumb.php_.9231a319.png)
 
 During my many trips, I’ve noticed that **MITM SSL inspection** by firewalls is increasingly common in companies and public organizations. So I decided to talk about it.
 

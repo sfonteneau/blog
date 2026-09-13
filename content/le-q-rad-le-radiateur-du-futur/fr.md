@@ -16,7 +16,7 @@ Le projet est parti d’un constat.
 D’un coté, il y a Amazon, Google, Facebook… qui utilisent de gros datacenter qui consomment beaucoup d’électricité, produisent énormément de chaleur, et qui du coup consomme beaucoup d’électricité pour refroidir l’ensemble.
 
 
-[![server-90389_640](images/server-90389_640-300x200.ea9bc716.jpg)](../wp-content/uploads/2015/08/server-90389_640.jpg)
+[![Baies de serveurs dans un centre de données](images/server-90389_640-300x200.ea9bc716.jpg)](../wp-content/uploads/2015/08/server-90389_640.jpg)
 
 
 Et de l’autre côté il y a nous. On utilise des chauffages, chauffe-eau, et climatisation qui consomment également beaucoup électricité.
@@ -25,7 +25,7 @@ Et de l’autre côté il y a nous. On utilise des chauffages, chauffe-eau, et c
 C’est quoi un Q.RAD ?  Ça ressemble a ça :
 
 
-[![h60-b5-0010_2403284](images/h60-b5-0010_2403284-300x187.6f305929.jpg)](../wp-content/uploads/2015/08/h60-b5-0010_2403284.jpg)
+[![Radiateur informatique Q.RAD installé à côté d’un escalier](images/h60-b5-0010_2403284-300x187.6f305929.jpg)](../wp-content/uploads/2015/08/h60-b5-0010_2403284.jpg)
 
 
 Le principe est simple, décentralisé les serveurs pour les mettre directement chez les particuliers. Plus besoin de chauffage pour le particulier (la chaleur dégagée par le serveur dans le Q.RAD est utiliser pour chauffer la pièce. Et plus besoin de system de refroidissement pour refroidir le serveur.

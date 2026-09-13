@@ -6,7 +6,7 @@ lang: "fr"
 key: "pourquoi-il-ne-faut-pas-utiliser-squid-en-mode-transparent"
 ---
 
-[![c81f772e265991de09ad69a5a6dfb071](images/c81f772e265991de09ad69a5a6dfb071-300x173.b97ff849.jpg)](../wp-content/uploads/2015/04/c81f772e265991de09ad69a5a6dfb071.jpg)
+[![Réseau d’ordinateurs connectés autour d’un globe](images/c81f772e265991de09ad69a5a6dfb071-300x173.b97ff849.jpg)](../wp-content/uploads/2015/04/c81f772e265991de09ad69a5a6dfb071.jpg)
 
 
 Il faut tout d’abord expliquer la différence entre un surf via un proxy déclaré et un surf sans Proxy.
@@ -28,7 +28,7 @@ Le serveur Proxy répond :
 Il est au milieu dans le schéma :
 
 
-[![280px-Proxy_concept_en.svg](images/280px-Proxy_concept_en.svg_.751e60eb.png)](../wp-content/uploads/2015/04/280px-Proxy_concept_en.svg_.png)
+[![Schéma d’un client se connectant à un serveur par l’intermédiaire d’un proxy](images/280px-Proxy_concept_en.svg_.751e60eb.png)](../wp-content/uploads/2015/04/280px-Proxy_concept_en.svg_.png)
 
 
 Squid a donc une option de proxy transparent, cette option permet de se mettre à la place de la passerelle, ainsi l’ordinateur pense qu’il discute directement avec le serveur web. Ceci fonctionne très bien avec un surf HTTP, mais ne fonctionne pas du tout avec le protocole HTTPS
@@ -40,7 +40,7 @@ Pourquoi ?
 Le protocole HTTPS sécurise et chiffre la connexion sur tous les sites les plus connus, il peut également vérifier que la connexion n’a pas été usurpée par un pirate. (vérification du nom de domaine, des certificats et validation par un certificat root). Bref ce protocole a été créé dans le but de protéger une connexion.
 
 
-[![header_icon](images/header_icon.6f96c434.png)](../wp-content/uploads/2015/04/header_icon.png)
+[![Icône de cadenas HTTPS](images/header_icon.6f96c434.png)](../wp-content/uploads/2015/04/header_icon.png)
 
 
 Squid est capable d’intercepter du surf SSL en mode transparent mais cela nécessite l’installation préalable d’un ça-root. Cette méthode n’est pas du tout appréciée par les sites web, car elle consiste a décrypter la connexion HTTPS en cours. De plus, certains sites web n’utilisent pas le SSL mais le [SNI](http://www.rackspace.com/knowledge_center/article/serving-secure-sites-with-sni-on-apache "SNI").
@@ -49,7 +49,7 @@ Squid est capable d’intercepter du surf SSL en mode transparent mais cela néc
 Cette méthode est considérée comme une attaque man in the middle :
 
 
-[![sslmim](images/sslmim-300x149.3ca8be79.png)](../wp-content/uploads/2015/04/sslmim.png)
+[![Schéma d’une interception HTTPS man-in-the-middle avec un attaquant entre la victime et le serveur Web](images/sslmim-300x149.3ca8be79.png)](../wp-content/uploads/2015/04/sslmim.png)
 
 
 Des solutions comme [ALCASAR](http://www.alcasar.net/fr/telechargement?func=select&id=11 "Alcasar") existent, mais je ne suis pas fan.  

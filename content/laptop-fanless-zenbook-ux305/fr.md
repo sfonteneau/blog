@@ -15,13 +15,13 @@ Avoir un fanless a certains avantages :
 – Bah oui, pas de ventilos, pas de poussière…
 
 
-[![composant-ordinateur-sale-poussiere-004-480x292](images/composant-ordinateur-sale-poussiere-004-480x292-300x183.267695cb.jpg)](../wp-content/uploads/2015/04/composant-ordinateur-sale-poussiere-004-480x292.jpg)Je voulais un truc plutôt fin. J’ai donc commencé mes recherches :
+[![Carte mère d’ordinateur couverte de poussière](images/composant-ordinateur-sale-poussiere-004-480x292-300x183.267695cb.jpg)](../wp-content/uploads/2015/04/composant-ordinateur-sale-poussiere-004-480x292.jpg)Je voulais un truc plutôt fin. J’ai donc commencé mes recherches :
 
 
 Le nouveau MacBook (si si j’y ai vraiment songé), mais techniquement tout passe par le nouveau port USB-C (c’est le seul et unique port, bref c’est pas pratique du tout).
 
 
-[![Capture du 2015-04-23 23:59:01](images/Capture-du-2015-04-23-235901-300x59.822e056d.png)](../wp-content/uploads/2015/04/Capture-du-2015-04-23-235901.png)
+[![Profil d’un MacBook fin avec son câble USB-C](images/Capture-du-2015-04-23-235901-300x59.822e056d.png)](../wp-content/uploads/2015/04/Capture-du-2015-04-23-235901.png)
 
 
 Du coup pour une simple clé USB, vous avez besoin de l’adaptateur…  
@@ -32,7 +32,7 @@ Vrai pas pratique…  Surtout quand le prix est quand même de 1449€ pour le m
 Bref passons à la suite…
 
 
-Je suis ensuite tombé sur le Samsung ATIV Book 9 (2015) :[![ATIV-Book-9-PLUS-2](images/ATIV-Book-9-PLUS-2-300x200.65952a9e.jpg)](../wp-content/uploads/2015/04/ATIV-Book-9-PLUS-2.jpg)  
+Je suis ensuite tombé sur le Samsung ATIV Book 9 (2015) :[![Ordinateur portable Samsung ATIV Book 9 Plus](images/ATIV-Book-9-PLUS-2-300x200.65952a9e.jpg)](../wp-content/uploads/2015/04/ATIV-Book-9-PLUS-2.jpg)  
 
 4 Go de RAM et 128 Go de SSD avec un processeur Intel Core M 0.9 GHz  
 
@@ -44,7 +44,7 @@ Il avait l’air sympa mais il était quand même à 1200 $
 Et ensuite je suis tombé là-dessus :
 
 
-[![ASUS-ZENBOOK-UX305_678x452](images/ASUS-ZENBOOK-UX305_678x452-300x169.aac2e3ce.jpg)](../wp-content/uploads/2015/04/ASUS-ZENBOOK-UX305_678x452.jpg)
+[![ASUS ZenBook UX305 vu de dos avec l’écran ouvert](images/ASUS-ZENBOOK-UX305_678x452-300x169.aac2e3ce.jpg)](../wp-content/uploads/2015/04/ASUS-ZENBOOK-UX305_678x452.jpg)
 
 
 Le ASUS ZenBook UX305.  
@@ -115,7 +115,7 @@ En revanche quelques points négatifs :
 Autre truc merdique, pour refroidir le PC, ASUS a fait une ouverture de l’écran qui rehausse le dessous du PC ; le problème c’est que ça raye le PC
 
 
-[![IMG_3171](images/IMG_3171-300x200.c4213cea.png)](../wp-content/uploads/2015/04/IMG_3171.png)
+[![Gros plan sur le bord du châssis du ZenBook UX305 où la charnière peut frotter](images/IMG_3171-300x200.c4213cea.png)](../wp-content/uploads/2015/04/IMG_3171.png)
 
 
 C’est un peu con…

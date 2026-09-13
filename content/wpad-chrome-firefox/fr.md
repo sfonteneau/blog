@@ -40,7 +40,7 @@ return proxy\_yes;
 Super ! Maintenant ça fonctionne ! Bon par contre plus du tout avec Firefox …
 
 
-[![ob_06116c_220-f-43166878-pf3admr4fspxhl3mi4x7fu7tkjooikqx](images/ob_06116c_220-f-43166878-pf3admr4fspxhl3mi4x7fu7tkjooikqx-300x200.9d8e4e94.jpg)](../wp-content/uploads/2015/11/ob_06116c_220-f-43166878-pf3admr4fspxhl3mi4x7fu7tkjooikqx.jpg)
+[![Femme frustrée se tirant les cheveux](images/ob_06116c_220-f-43166878-pf3admr4fspxhl3mi4x7fu7tkjooikqx-300x200.9d8e4e94.jpg)](../wp-content/uploads/2015/11/ob_06116c_220-f-43166878-pf3admr4fspxhl3mi4x7fu7tkjooikqx.jpg)
 
 
 La seul solution que j’ai trouvé est d’empêcher que Firefox entre dans la boucle if(isInNetEx(myIpAddress() pour ne pas le faire planter et donc déclarer tous les cas possibles.

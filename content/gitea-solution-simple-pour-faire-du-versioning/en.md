@@ -8,7 +8,7 @@ key: gitea-solution-simple-pour-faire-du-versioning
 
 A quick post to introduce a tool I’ve been discovering lately: **Gitea**.
 
-![](images/gitea.4f30d5b1.png)
+![Gitea logo](images/gitea.4f30d5b1.png)
 
 What is Gitea? A no‑nonsense, self‑hosted Git service.
 

@@ -6,7 +6,7 @@ lang: en
 key: osticket-solution-de-gestion-de-ticket
 ---
 
-![osticket-logo](images/osticket-logo-300x225.bf2157ef.jpg)
+![osTicket logo](images/osticket-logo-300x225.bf2157ef.jpg)
 
 I was looking for a ticketing / incident management solution that is powerful but simple. I tried GLPI, but it didn’t fit what I wanted.
 

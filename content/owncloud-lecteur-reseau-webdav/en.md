@@ -6,7 +6,7 @@ lang: en
 key: owncloud-lecteur-reseau-webdav
 ---
 
-![webfolder](images/webfolder-150x150.a85e6894.jpg)
+![Web folder icon with a globe](images/webfolder-150x150.a85e6894.jpg)
 
 Another short post about an issue I ran into.
 
@@ -18,7 +18,7 @@ A simpler solution: **WebDAV**.
 
 On Windows, once mounted, WebDAV behaves like a network drive. Because it’s a standard, it’s also available on many mobile devices.
 
-![16284069063_f3684ae5c2_o](images/16284069063_f3684ae5c2_o-150x150.a3befd06.png)
+![Laptop and mobile devices connected to a cloud service](images/16284069063_f3684ae5c2_o-150x150.a3befd06.png)
 
 ## Making WebDAV work on Windows
 

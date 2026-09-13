@@ -11,7 +11,7 @@ Je viens de découvrir un nouveau logiciel de déploiement : WAPT
 WAPT est une solution qui aide au quotidien en automatisant les installations, les désinstallations et les mises à jour de l’ensemble des logiciels d’un parc informatique.
 
 
-[![800px-Schema-wapt.svg](images/800px-Schema-wapt.svg_-300x111.41a808a6.png)](../wp-content/uploads/2015/01/800px-Schema-wapt.svg_.png)
+[![Schéma de l’architecture WAPT montrant le déploiement de logiciels du serveur vers les postes Windows](images/800px-Schema-wapt.svg_-300x111.41a808a6.png)](../wp-content/uploads/2015/01/800px-Schema-wapt.svg_.png)
 
 
 Il existe la version « WAPT Starter » que j’utilise pour les particuliers ou petite entreprise, (une utilisation vraiment copier-coller de APT sur linux), on installe les logiciels souhaités avec la petite interface web, et lorsqu’une mise à jour est dispo sur le dépot WAPT <http://wapt.tranquil.it/wapt>, le logiciel va vous proposer d’installer automatiquement toutes les mises à jour disponibles.

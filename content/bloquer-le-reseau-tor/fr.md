@@ -6,7 +6,7 @@ lang: "fr"
 key: "bloquer-le-reseau-tor"
 ---
 
-![tor_browser_logo__no_trans_background__by_j_bob-d5gjsad](images/tor_browser_logo__no_trans_background__by_j_bob-d5gjsad-300x184.aa975f6d.png)
+![Logo de Tor Browser](images/tor_browser_logo__no_trans_background__by_j_bob-d5gjsad-300x184.aa975f6d.png)
 
 
 Je travaille dans un lycée et un collège, autant dire que je doit empêcher mes lycéens et mes collégiens de surfer sur des sites non-pédagogiques…
@@ -24,7 +24,7 @@ Au démarrage Tor va vous demander si votre réseau est équipé d’un proxy. S
 La première sécurité est donc d’empêcher les clients de sortir sur directement sur internet et de mettre en place un proxy. Les clients ne pourront donc pas sortir sur internet sans passer par lui. Seul le proxy sera autorisé à sortir sur internet. Tor va donc scanner et ne jamais trouver de « porte de sortie ».
 
 
-![jns_ch12-18](images/jns_ch12-18-300x157.c92ee60a.gif)
+![Schéma réseau où les clients passent par un proxy HTTP et où le pare-feu bloque l’accès direct à Internet](images/jns_ch12-18-300x157.c92ee60a.gif)
 
 
 Mais Tor (s’il est bien configuré) peut aussi passer par un proxy pour contacter directement des « IP Tor ». Son principe de fonctionnement est le suivant :  

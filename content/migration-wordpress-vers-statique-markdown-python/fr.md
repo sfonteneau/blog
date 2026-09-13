@@ -6,7 +6,7 @@ lang: "fr"
 key: "migration-wordpress-statique-markdown-python"
 ---
 
-![wp_to_md.png](images/wp_to_md.png)
+![Schéma d’une migration de WordPress vers Markdown avec Python](images/wp_to_md.png)
 
 Pendant longtemps, mon blog tournait sous **WordPress**. Ça marche très bien, mais je n’avais plus besoin de toute la “machine” : base de données, plugins, mises à jour, surface d’attaque, etc.
 

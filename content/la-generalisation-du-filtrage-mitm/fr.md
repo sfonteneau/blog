@@ -6,7 +6,7 @@ lang: "fr"
 key: "la-generalisation-du-filtrage-mitm"
 ---
 
-![](images/wp-thumb.php_.9231a319.png)
+![Schéma d’une interception man-in-the-middle entre un client et un serveur](images/wp-thumb.php_.9231a319.png)
 
 
 Je constate lors de mes divers et nombreux déplacement que le filtrage mitm par les firewall est quelque chose de plus en plus répandu en entreprise et collectivité. J’ai donc décidé d’en parler !

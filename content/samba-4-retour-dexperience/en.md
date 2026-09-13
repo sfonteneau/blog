@@ -6,7 +6,7 @@ lang: en
 key: samba-4-retour-dexperience
 ---
 
-[![page_samba4](images/page_samba4.7eb97d89.png)](../wp-content/uploads/2015/03/page_samba4.png)
+[![Samba 4 Active Directory graphic with Linux and Windows logos](images/page_samba4.7eb97d89.png)](../wp-content/uploads/2015/03/page_samba4.png)
 
 In my previous post I talked about the outrageous price of Microsoft licenses: a simple virtualized Active Directory can cost a lot.
 

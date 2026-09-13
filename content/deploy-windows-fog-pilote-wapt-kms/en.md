@@ -11,7 +11,7 @@ I decided to compile the wiki tutorials I use during deployments.
 All tutorials are available on http://reseaux85.fr/ (I contribute there too).
 Thanks to all contributors (even interns 😉).
 
-[![deploiement](images/deploiement.86bc018c.jpg)](../wp-content/uploads/2015/07/deploiement.jpg)
+[![Deployment box containing several software packages](images/deploiement.86bc018c.jpg)](../wp-content/uploads/2015/07/deploiement.jpg)
 
 Here is my deployment procedure (links to the wiki):
 
@@ -40,4 +40,4 @@ Here is my deployment procedure (links to the wiki):
 
 The advantage of this setup (FOG + WAPT) is that if a workstation breaks and Wake‑on‑LAN is properly configured, I often don’t even need to leave my desk… except for hardware issues.
 
-[![INTRO_TEND2010](images/INTRO_TEND2010-300x200.814e6d12.jpg)](../wp-content/uploads/2015/07/INTRO_TEND2010.jpg)
+[![Man using binoculars to look at a laptop, illustrating remote administration](images/INTRO_TEND2010-300x200.814e6d12.jpg)](../wp-content/uploads/2015/07/INTRO_TEND2010.jpg)
