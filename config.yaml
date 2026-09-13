@@ -2,6 +2,7 @@ site:
   title: "Les Fourmis Du Web"
   tagline: "An IT tech blog (and more)"
   author: "Simon Fonteneau"
+  url: "https://blog.lesfourmisduweb.org"
   
 style: "generator/assets/style8.css"
 theme: "generator/assets/theme.js"
